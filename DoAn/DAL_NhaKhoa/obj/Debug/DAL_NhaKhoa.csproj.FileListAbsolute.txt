@@ -1,0 +1,5 @@
+C:\Users\ASUS\Desktop\Code Form\DoAn\DAL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAn\DAL_NhaKhoa\bin\Debug\DAL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAn\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Code Form\DoAn\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAn\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.pdb
