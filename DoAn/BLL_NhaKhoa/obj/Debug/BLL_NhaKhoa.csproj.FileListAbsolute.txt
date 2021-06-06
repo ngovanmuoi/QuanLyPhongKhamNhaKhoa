@@ -1,7 +1,0 @@
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\bin\Debug\BLL_NhaKhoa.dll
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\bin\Debug\BLL_NhaKhoa.pdb
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.csprojResolveAssemblyReference.cache
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.dll
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.pdb
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll
-C:\Users\ASUS\Desktop\Code Form\DoAn\BLL_NhaKhoa\bin\Debug\DAL_NhaKhoa.pdb
