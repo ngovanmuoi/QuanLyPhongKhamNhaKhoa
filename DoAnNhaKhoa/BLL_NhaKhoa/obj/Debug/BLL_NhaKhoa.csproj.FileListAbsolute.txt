@@ -1,0 +1,10 @@
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\bin\Debug\BLL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\bin\Debug\BLL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\bin\Debug\DAL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\obj\Debug\BLL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\BLL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll.config

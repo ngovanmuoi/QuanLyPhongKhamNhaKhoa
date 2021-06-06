@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_NhaKhoa", "GUI_NhaKhoa\GUI_NhaKhoa.csproj", "{37748864-D5E1-4B27-99FB-CF7A46739DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_NhaKhoa", "BLL_NhaKhoa\BLL_NhaKhoa.csproj", "{88DE3A3A-902F-41A2-9C21-100D45DF7E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_NhaKhoa", "DAL_NhaKhoa\DAL_NhaKhoa.csproj", "{92448BCD-B57E-4804-AB4D-EAF0D05ABF10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37748864-D5E1-4B27-99FB-CF7A46739DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37748864-D5E1-4B27-99FB-CF7A46739DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37748864-D5E1-4B27-99FB-CF7A46739DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37748864-D5E1-4B27-99FB-CF7A46739DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DE3A3A-902F-41A2-9C21-100D45DF7E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DE3A3A-902F-41A2-9C21-100D45DF7E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DE3A3A-902F-41A2-9C21-100D45DF7E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DE3A3A-902F-41A2-9C21-100D45DF7E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92448BCD-B57E-4804-AB4D-EAF0D05ABF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92448BCD-B57E-4804-AB4D-EAF0D05ABF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92448BCD-B57E-4804-AB4D-EAF0D05ABF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92448BCD-B57E-4804-AB4D-EAF0D05ABF10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

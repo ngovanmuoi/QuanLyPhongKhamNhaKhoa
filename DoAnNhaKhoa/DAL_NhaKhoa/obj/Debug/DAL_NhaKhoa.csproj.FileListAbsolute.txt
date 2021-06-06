@@ -1,0 +1,7 @@
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\bin\Debug\DAL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.dll
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.pdb
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\bin\Debug\DAL_NhaKhoa.dll.config
+C:\Users\ASUS\Desktop\Code Form\DoAnNhaKhoa\DAL_NhaKhoa\obj\Debug\DAL_NhaKhoa.csprojAssemblyReference.cache
