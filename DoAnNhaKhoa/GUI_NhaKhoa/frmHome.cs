@@ -20,26 +20,21 @@ namespace GUI_NhaKhoa
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            int dai = 0;
-            int rong = 0;
+
             frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
-            rong = frm.Size.Width;
-            dai = frm.Size.Height;
             frm.MdiParent = this;
             frm.Show();
-            this.ClientSize = new Size(rong, dai + 190);
+            this.ClientSize = new Size(frm.Size.Width, frm.Size.Height + 190);
+
         }
 
         private void btnTiepDonBenNhan_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int dai = 0;
-            int rong = 0;
-            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
-            rong = frm.Size.Width;
-            dai = frm.Size.Height;
+            
+            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();           
             frm.MdiParent = this;
             frm.Show();
-            this.ClientSize = new Size(rong, dai + 190);
+
         }
 
         private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
@@ -67,6 +62,20 @@ namespace GUI_NhaKhoa
             {
                 Application.Exit();
             }
+        }
+
+        private void btnQLTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmNguoiDung nguoiDung = new frmNguoiDung();
+            nguoiDung.MdiParent = this;
+            nguoiDung.Show();
+        }
+
+        private void btnQLNhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.MdiParent = this;
+            form1.Show();
         }
     }
 }

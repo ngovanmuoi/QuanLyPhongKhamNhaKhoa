@@ -123,7 +123,7 @@ namespace GUI_NhaKhoa
             this.ribbon.QuickToolbarItemLinks.Add(this.lblTaiKhoan);
             this.ribbon.QuickToolbarItemLinks.Add(this.lblTenNV);
             this.ribbon.QuickToolbarItemLinks.Add(this.lblQuyen);
-            this.ribbon.Size = new System.Drawing.Size(1509, 209);
+            this.ribbon.Size = new System.Drawing.Size(1517, 209);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -139,6 +139,7 @@ namespace GUI_NhaKhoa
             this.btnQLNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.ImageOptions.Image")));
             this.btnQLNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.ImageOptions.LargeImage")));
             this.btnQLNhanVien.Name = "btnQLNhanVien";
+            this.btnQLNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLNhanVien_ItemClick);
             // 
             // btnDoiMK
             // 
@@ -160,11 +161,12 @@ namespace GUI_NhaKhoa
             // 
             // btnQLTaiKhoan
             // 
-            this.btnQLTaiKhoan.Caption = "Quản lý tài khoản";
+            this.btnQLTaiKhoan.Caption = "Quản lý người dùng";
             this.btnQLTaiKhoan.Id = 5;
             this.btnQLTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTaiKhoan.ImageOptions.Image")));
             this.btnQLTaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLTaiKhoan.ImageOptions.LargeImage")));
             this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
+            this.btnQLTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLTaiKhoan_ItemClick);
             // 
             // btnQLDichVu
             // 
@@ -447,20 +449,21 @@ namespace GUI_NhaKhoa
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 1017);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 1071);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1509, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1517, 30);
             // 
             // xtraTabbedMdiManager1
             // 
+            this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 1047);
+            this.ClientSize = new System.Drawing.Size(1517, 1101);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
