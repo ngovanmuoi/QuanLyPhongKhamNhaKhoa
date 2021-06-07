@@ -30,9 +30,9 @@ namespace GUI_NhaKhoa
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNguoiDung));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,8 +44,6 @@ namespace GUI_NhaKhoa
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.grThongTin = new DevExpress.XtraEditors.GroupControl();
-            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
-            this.cbbHoTen = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -55,6 +53,8 @@ namespace GUI_NhaKhoa
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvDS = new System.Windows.Forms.DataGridView();
+            this.cbbHoTen = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -64,6 +64,8 @@ namespace GUI_NhaKhoa
             ((System.ComponentModel.ISupportInitialize)(this.grThongTin)).BeginInit();
             this.grThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbHoTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTrangThai.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -135,6 +137,7 @@ namespace GUI_NhaKhoa
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -148,6 +151,7 @@ namespace GUI_NhaKhoa
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnReload
             // 
@@ -161,6 +165,7 @@ namespace GUI_NhaKhoa
             this.btnReload.Text = "Reload";
             this.btnReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnSua
             // 
@@ -174,6 +179,7 @@ namespace GUI_NhaKhoa
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -187,6 +193,7 @@ namespace GUI_NhaKhoa
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -222,30 +229,13 @@ namespace GUI_NhaKhoa
             this.grThongTin.TabIndex = 2;
             this.grThongTin.Text = "Thông tin người dùng";
             // 
-            // cbbTrangThai
-            // 
-            this.cbbTrangThai.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTrangThai.FormattingEnabled = true;
-            this.cbbTrangThai.Location = new System.Drawing.Point(192, 248);
-            this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(302, 33);
-            this.cbbTrangThai.TabIndex = 9;
-            // 
-            // cbbHoTen
-            // 
-            this.cbbHoTen.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbHoTen.FormattingEnabled = true;
-            this.cbbHoTen.Location = new System.Drawing.Point(192, 109);
-            this.cbbHoTen.Name = "cbbHoTen";
-            this.cbbHoTen.Size = new System.Drawing.Size(302, 33);
-            this.cbbHoTen.TabIndex = 8;
-            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(192, 206);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(302, 33);
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(297, 33);
             this.txtMatKhau.TabIndex = 7;
             // 
             // txtTenDN
@@ -253,7 +243,7 @@ namespace GUI_NhaKhoa
             this.txtTenDN.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDN.Location = new System.Drawing.Point(192, 159);
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(302, 33);
+            this.txtTenDN.Size = new System.Drawing.Size(297, 33);
             this.txtTenDN.TabIndex = 6;
             // 
             // txtMaNV
@@ -261,7 +251,7 @@ namespace GUI_NhaKhoa
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Location = new System.Drawing.Point(192, 58);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(302, 33);
+            this.txtMaNV.Size = new System.Drawing.Size(297, 33);
             this.txtMaNV.TabIndex = 5;
             // 
             // label5
@@ -317,30 +307,30 @@ namespace GUI_NhaKhoa
             // dtgvDS
             // 
             this.dtgvDS.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dtgvDS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.AliceBlue;
+            this.dtgvDS.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dtgvDS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDS.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtgvDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgvDS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dtgvDS.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dtgvDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvDS.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvDS.DefaultCellStyle = dataGridViewCellStyle27;
             this.dtgvDS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvDS.EnableHeadersVisualStyles = false;
             this.dtgvDS.Location = new System.Drawing.Point(2, 33);
@@ -350,8 +340,36 @@ namespace GUI_NhaKhoa
             this.dtgvDS.RowHeadersWidth = 51;
             this.dtgvDS.RowTemplate.Height = 30;
             this.dtgvDS.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvDS.Size = new System.Drawing.Size(751, 570);
             this.dtgvDS.TabIndex = 1;
+            this.dtgvDS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDS_CellClick);
+            // 
+            // cbbHoTen
+            // 
+            this.cbbHoTen.Location = new System.Drawing.Point(192, 106);
+            this.cbbHoTen.Name = "cbbHoTen";
+            this.cbbHoTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbHoTen.Properties.Appearance.Options.UseFont = true;
+            this.cbbHoTen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbHoTen.Size = new System.Drawing.Size(297, 32);
+            this.cbbHoTen.TabIndex = 10;
+            this.cbbHoTen.TextChanged += new System.EventHandler(this.cbbHoTen_TextChanged);
+            // 
+            // cbbTrangThai
+            // 
+            this.cbbTrangThai.Location = new System.Drawing.Point(192, 250);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTrangThai.Properties.Appearance.Options.UseFont = true;
+            this.cbbTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbTrangThai.Properties.Items.AddRange(new object[] {
+            "Hoạt động",
+            "Khóa"});
+            this.cbbTrangThai.Size = new System.Drawing.Size(297, 32);
+            this.cbbTrangThai.TabIndex = 11;
             // 
             // frmNguoiDung
             // 
@@ -372,6 +390,8 @@ namespace GUI_NhaKhoa
             this.grThongTin.ResumeLayout(false);
             this.grThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbHoTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTrangThai.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,8 +400,6 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private DevExpress.XtraEditors.GroupControl grThongTin;
-        private System.Windows.Forms.ComboBox cbbTrangThai;
-        private System.Windows.Forms.ComboBox cbbHoTen;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenDN;
         private System.Windows.Forms.TextBox txtMaNV;
@@ -399,5 +417,7 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dtgvDS;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbHoTen;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbTrangThai;
     }
 }

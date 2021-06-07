@@ -48,12 +48,16 @@ namespace GUI_NhaKhoa
         {
             try
             {
-                if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim()) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim()) == "Hoạt động")
+                if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text, txtMatKhau.Text) == "Hoạt động")
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo");
                     frmHome home = new frmHome();
                     home.Show();
                     this.Hide();
+                }
+                if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text, txtMatKhau.Text) == "Khóa")
+                {
+                    MessageBox.Show("Tài khoản đã bị khóa", "Thông báo");                    
                 }
                 else
                 {
