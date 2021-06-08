@@ -199,6 +199,7 @@ namespace GUI_NhaKhoa
             this.btnPhanQuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.ImageOptions.Image")));
             this.btnPhanQuyen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.ImageOptions.LargeImage")));
             this.btnPhanQuyen.Name = "btnPhanQuyen";
+            this.btnPhanQuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanQuyen_ItemClick);
             // 
             // btnDMManHinh
             // 
@@ -207,6 +208,7 @@ namespace GUI_NhaKhoa
             this.btnDMManHinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDMManHinh.ImageOptions.Image")));
             this.btnDMManHinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDMManHinh.ImageOptions.LargeImage")));
             this.btnDMManHinh.Name = "btnDMManHinh";
+            this.btnDMManHinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDMManHinh_ItemClick);
             // 
             // btnQLNhomNguoiDung
             // 
@@ -215,6 +217,7 @@ namespace GUI_NhaKhoa
             this.btnQLNhomNguoiDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhomNguoiDung.ImageOptions.Image")));
             this.btnQLNhomNguoiDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLNhomNguoiDung.ImageOptions.LargeImage")));
             this.btnQLNhomNguoiDung.Name = "btnQLNhomNguoiDung";
+            this.btnQLNhomNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLNhomNguoiDung_ItemClick);
             // 
             // btnThoat
             // 
@@ -243,6 +246,8 @@ namespace GUI_NhaKhoa
             // 
             this.lblTaiKhoan.Caption = "tài khoản";
             this.lblTaiKhoan.Id = 17;
+            this.lblTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lblTaiKhoan.ImageOptions.Image")));
+            this.lblTaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("lblTaiKhoan.ImageOptions.LargeImage")));
             this.lblTaiKhoan.Name = "lblTaiKhoan";
             this.lblTaiKhoan.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -250,6 +255,8 @@ namespace GUI_NhaKhoa
             // 
             this.lblTenNV.Caption = "tên nhân viên";
             this.lblTenNV.Id = 18;
+            this.lblTenNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lblTenNV.ImageOptions.Image")));
+            this.lblTenNV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("lblTenNV.ImageOptions.LargeImage")));
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -257,6 +264,8 @@ namespace GUI_NhaKhoa
             // 
             this.lblQuyen.Caption = "quyền";
             this.lblQuyen.Id = 19;
+            this.lblQuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("lblQuyen.ImageOptions.Image")));
+            this.lblQuyen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("lblQuyen.ImageOptions.LargeImage")));
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -375,7 +384,6 @@ namespace GUI_NhaKhoa
             // ribbQLPhongKham
             // 
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLNhanVien);
-            this.ribbQLPhongKham.ItemLinks.Add(this.btnQLTaiKhoan);
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLDichVu);
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLBenhLy);
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLBenhNhan);
@@ -385,6 +393,7 @@ namespace GUI_NhaKhoa
             // 
             // ribbQLPhanMem
             // 
+            this.ribbQLPhanMem.ItemLinks.Add(this.btnQLTaiKhoan);
             this.ribbQLPhanMem.ItemLinks.Add(this.btnPhanQuyen);
             this.ribbQLPhanMem.ItemLinks.Add(this.btnDMManHinh);
             this.ribbQLPhanMem.ItemLinks.Add(this.btnQLNhomNguoiDung);
@@ -466,6 +475,7 @@ namespace GUI_NhaKhoa
             this.ClientSize = new System.Drawing.Size(1517, 1101);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::GUI_NhaKhoa.Properties.Resources.logo;
             this.IsMdiContainer = true;
             this.Name = "frmHome";
             this.Ribbon = this.ribbon;

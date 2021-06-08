@@ -33,6 +33,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -40,6 +42,7 @@
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -55,17 +58,32 @@
   <ItemGroup>
     <Compile Include="BLL_NhaKhoa\BLLConfig.cs" />
     <Compile Include="BLL_NhaKhoa\BLLDangNhap.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLManHinh.cs" />
     <Compile Include="BLL_NhaKhoa\BLLNguoiDung.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLNhomNguoiDung.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhanQuyen.cs" />
     <Compile Include="BLL_NhaKhoa\QuanLyNhaKhoa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhaKhoa.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmPhanQuyen.Designer.cs">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemNguoiDungVaoNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNguoiDungVaoNhom.Designer.cs">
+      <DependentUpon>frmThemNguoiDungVaoNhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWellcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWellcome.Designer.cs">
+      <DependentUpon>frmWellcome.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKetNoi.cs">
       <SubType>Form</SubType>
@@ -85,11 +103,23 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHinh.Designer.cs">
+      <DependentUpon>frmManHinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNguoiDung.Designer.cs">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhomNguoiDung.Designer.cs">
+      <DependentUpon>frmNhomNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTiepDonBenhNhan.cs">
       <SubType>Form</SubType>
@@ -102,8 +132,14 @@
     <None Include="BLL_NhaKhoa\QuanLyNhaKhoa.dbml.layout">
       <DependentUpon>QuanLyNhaKhoa.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPhanQuyen.resx">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemNguoiDungVaoNhom.resx">
+      <DependentUpon>frmThemNguoiDungVaoNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWellcome.resx">
+      <DependentUpon>frmWellcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKetNoi.resx">
       <DependentUpon>frmKetNoi.cs</DependentUpon>
@@ -114,8 +150,14 @@
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManHinh.resx">
+      <DependentUpon>frmManHinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhomNguoiDung.resx">
+      <DependentUpon>frmNhomNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepDonBenhNhan.resx">
       <DependentUpon>frmTiepDonBenhNhan.cs</DependentUpon>
@@ -181,6 +223,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -36,6 +36,64 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             }
             return b;
         }
+
+        public string LayTenNV(string user, string password)
+        {
+            password = MaHoa(password);
+            string b = "";
+            var Tennv = (from p in nhakhoa.NhanViens
+                         join q in nhakhoa.NguoiDungs on p.MaNhanVien equals q.MaNhanVien
+                         where q.TenDangNhap.Trim() == user && q.MatKhau.Trim() == password
+                         select new
+                         {
+                             p.HoTen
+                         }).ToList();
+            if (Tennv.Count() != 0)
+            {
+                foreach (var a in Tennv)
+                    b = a.HoTen;
+            }
+            return b;
+        }
+
+        public string LayQuyenNV(string user, string password)
+        {
+            string b = "";
+            password = MaHoa(password);
+            var Tennv = (from p in nhakhoa.NguoiDungs
+                         join q in nhakhoa.NguoiDungNhomNguoiDungs on p.TenDangNhap equals q.TenDangNhap
+                         join r in nhakhoa.NhomNguoiDungs on q.MaNhom equals r.MaNhom
+                         where p.TenDangNhap.Trim() == user && p.MatKhau.Trim() == password
+                         select new
+                         {
+                             r.TenNhom
+                         }).ToList();
+            if (Tennv.Count() != 0)
+            {
+                foreach (var a in Tennv)
+                    b = a.TenNhom;
+            }
+            return b;
+        }
+
+        public string LayMaNV(string user, string password)
+        {
+            password = MaHoa(password);
+            string b = "";
+            var Tennv = (from p in nhakhoa.NguoiDungs
+                         where p.TenDangNhap.Trim() == user && p.MatKhau.Trim() == password
+                         select new
+                         {
+                             p.MaNhanVien
+                         }).ToList();
+            if (Tennv.Count() != 0)
+            {
+                foreach (var a in Tennv)
+                    b = a.MaNhanVien;
+            }
+            return b;
+        }
+
         public string MaHoa(string MK)
         {
             string str = "";

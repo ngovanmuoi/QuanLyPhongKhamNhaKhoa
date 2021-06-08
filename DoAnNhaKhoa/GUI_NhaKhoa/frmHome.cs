@@ -13,6 +13,13 @@ namespace GUI_NhaKhoa
 {
     public partial class frmHome : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+
+        public string TenNV { get; set; }
+        public string Quyen { get; set; }
+        public string TK { get; set; }
+        public string TTin { get; set; }
+        public string TenDN { get; set; }
+
         public frmHome()
         {
             InitializeComponent();
@@ -20,8 +27,10 @@ namespace GUI_NhaKhoa
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-
-            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
+            lblTenNV.Caption = TenNV;
+            lblQuyen.Caption = Quyen;
+            lblTaiKhoan.Caption = TenDN;
+            frmWellcome frm = new frmWellcome();
             frm.MdiParent = this;
             frm.Show();
             this.ClientSize = new Size(frm.Size.Width, frm.Size.Height + 190);
@@ -73,9 +82,30 @@ namespace GUI_NhaKhoa
 
         private void btnQLNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.MdiParent = this;
-            form1.Show();
+            //Form1 form1 = new Form1();
+            //form1.MdiParent = this;
+            //form1.Show();
+        }
+
+        private void btnQLNhomNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmNhomNguoiDung nhomNguoiDung = new frmNhomNguoiDung();
+            nhomNguoiDung.MdiParent = this;
+            nhomNguoiDung.Show();
+        }
+
+        private void btnDMManHinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmManHinh manHinh = new frmManHinh();
+            manHinh.MdiParent = this;
+            manHinh.Show();
+        }
+
+        private void btnPhanQuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPhanQuyen phanQuyen = new frmPhanQuyen();
+            phanQuyen.MdiParent = this;
+            phanQuyen.Show();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_NhaKhoa
 {
-    public partial class Form1 : Form
+    public partial class frmWellcome : Form
     {
-        public Form1()
+        public frmWellcome()
         {
             InitializeComponent();
         }

@@ -32,19 +32,19 @@ namespace GUI_NhaKhoa
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
 
-            this.txtMaNV.Enabled = false;
-            this.txtMatKhau.Enabled = false;
-            this.txtTenDN.Enabled = false;
-            this.cbbHoTen.Enabled = true;
-            this.cbbTrangThai.Enabled = false;
+            txtMaNV.Enabled = false;
+            txtMatKhau.Enabled = false;
+            txtTenDN.Enabled = false;
+            cbbHoTen.Enabled = true;
+            cbbTrangThai.Enabled = false;
 
-            this.txtMatKhau.ResetText();
-            this.txtMaNV.ResetText();
-            this.cbbTrangThai.ResetText();
-            this.txtTenDN.ResetText();
-            this.cbbHoTen.ResetText();           
-            this.txtMaNV.Enabled = false;
-            this.cbbHoTen.Enabled = false;
+            txtMatKhau.ResetText();
+            txtMaNV.ResetText();
+            cbbTrangThai.ResetText();
+            txtTenDN.ResetText();
+            cbbHoTen.ResetText();           
+            txtMaNV.Enabled = false;
+            cbbHoTen.Enabled = false;
         }
         private void frmNguoiDung_Load(object sender, EventArgs e)
         {

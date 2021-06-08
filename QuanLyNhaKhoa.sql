@@ -16,7 +16,7 @@ CREATE TABLE NhanVien
 )
 CREATE TABLE NhomNguoiDung
 (
-	MaNhom VARCHAR NOT NULL,
+	MaNhom VARCHAR(20) NOT NULL,
 	TenNhom NVARCHAR (50),
 	GhiChu NVARCHAR(200),
 	PRIMARY KEY(MaNhom)
@@ -33,7 +33,7 @@ CREATE TABLE NguoiDung
 CREATE TABLE NguoiDungNhomNguoiDung
 (
 	TenDangNhap VARCHAR(50) NOT NULL,
-	MaNhom VARCHAR NOT NULL,
+	MaNhom VARCHAR(20) NOT NULL,
 	GhiChu NVARCHAR(200),
 	PRIMARY KEY(TenDangNhap,  MaNhom),
 	CONSTRAINT FK_NguoiDung_Nhom FOREIGN KEY(TenDangNhap) REFERENCES NguoiDung(TenDangNhap),
@@ -41,14 +41,14 @@ CREATE TABLE NguoiDungNhomNguoiDung
 )
 CREATE TABLE ManHinh
 (
-	MaManHinh VARCHAR NOT NULL,
+	MaManHinh VARCHAR(20) NOT NULL,
 	TenManHinh NVARCHAR (50) NOT NULL,	
 	PRIMARY KEY(MaManHinh)
 )
 CREATE TABLE PhanQuyen
 (
-	MaNhom VARCHAR NOT NULL,
-	MaManHinh VARCHAR NOT NULL,
+	MaNhom VARCHAR(20) NOT NULL,
+	MaManHinh VARCHAR(20) NOT NULL,
 	CoQuyen NVARCHAR (10) NOT NULL,
 	PRIMARY KEY(MaNhom, MaManHinh),
 	CONSTRAINT FK_PhanQuyen_NhomNguoiDung FOREIGN KEY(MaNhom) REFERENCES NhomNguoiDung(MaNhom),
@@ -69,21 +69,21 @@ VALUES
 
 INSERT INTO NhomNguoiDung
 VALUES
-('admin',N'Quản lý',Null),
-('BS',N'Bác sĩ',Null),
-('ThuNgan',N'Thu Ngân',Null),
-('LeTan',N'Lễ Tân',Null)
+('admin',N'Quản lý',N'admin nnè'),
+('BS',N'Bác sĩ',N'Bác sĩ nè'),
+('ThuNgan',N'Thu Ngân',N'dành cho thu ngân'),
+('LeTan',N'Lễ Tân',N'hihi')
 
 INSERT INTO NguoiDung
 VALUES
-('NV001','ngo10','123',N'Hoạt động'),
-('NV002','duong','123',N'Hoạt động'),
-('NV003','don123','123',N'Hoạt động')
+('NV001','ngo10','32441859',N'Hoạt động'),
+('NV002','duong','32441859',N'Hoạt động'),
+('NV003','don123','32441859',N'Hoạt động')
 
 INSERT INTO NguoiDungNhomNguoiDung
 VALUES
-('ngo10','admin',Null),
-('duong','LeTan',Null)
+('ngo10','admin',N'không có ghi chú'),
+('duong','LeTan',N'hehe')
 
 INSERT INTO ManHinh
 VALUES
@@ -94,3 +94,4 @@ INSERT INTO PhanQuyen
 VALUES
 ('admin','ribbQuanLy',N'Có'),
 ('LeTan','ribbQuanLy',N'Không')
+

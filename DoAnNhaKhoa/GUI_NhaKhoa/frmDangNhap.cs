@@ -15,6 +15,12 @@ namespace GUI_NhaKhoa
     {
         BLLDangNhap bLLDangNhap = new BLLDangNhap();
         BLLConfig bLLConfig = new BLLConfig();
+
+        public string MaNVDangChon { get; set; }
+        public string TenNVDangChon { get; set; }
+        public string QuyenNVDangChon { get; set; }
+        public string TenTK { get; set; }
+
         public frmDangNhap()
         {
             InitializeComponent();
@@ -50,12 +56,20 @@ namespace GUI_NhaKhoa
             {
                 if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text, txtMatKhau.Text) == "Hoạt động")
                 {
+                    TenNVDangChon = bLLDangNhap.LayTenNV(txtTaiKhoan.Text, txtMatKhau.Text);
+                    QuyenNVDangChon = bLLDangNhap.LayQuyenNV(txtTaiKhoan.Text, txtMatKhau.Text);
+                    MaNVDangChon = bLLDangNhap.LayMaNV(txtTaiKhoan.Text, txtMatKhau.Text);
+                    TenTK = txtTaiKhoan.Text;
                     MessageBox.Show("Đăng nhập thành công", "Thông báo");
                     frmHome home = new frmHome();
+                    home.TenNV = TenNVDangChon;
+                    home.Quyen = QuyenNVDangChon;
+                    home.TK = MaNVDangChon;
+                    home.TenDN = TenTK;
                     home.Show();
                     this.Hide();
                 }
-                if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text, txtMatKhau.Text) == "Khóa")
+                else if (bLLDangNhap.LayTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text) == 1 && bLLDangNhap.LayTrangThai(txtTaiKhoan.Text, txtMatKhau.Text) == "Khóa")
                 {
                     MessageBox.Show("Tài khoản đã bị khóa", "Thông báo");                    
                 }
