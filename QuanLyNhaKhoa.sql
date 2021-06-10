@@ -45,11 +45,12 @@ CREATE TABLE ManHinh
 	TenManHinh NVARCHAR (50) NOT NULL,	
 	PRIMARY KEY(MaManHinh)
 )
+
 CREATE TABLE PhanQuyen
 (
 	MaNhom VARCHAR(20) NOT NULL,
 	MaManHinh VARCHAR(20) NOT NULL,
-	CoQuyen NVARCHAR (10) NOT NULL,
+	CoQuyen bit NOT NULL,
 	PRIMARY KEY(MaNhom, MaManHinh),
 	CONSTRAINT FK_PhanQuyen_NhomNguoiDung FOREIGN KEY(MaNhom) REFERENCES NhomNguoiDung(MaNhom),
 	CONSTRAINT FK_PhanQuyen_ManHinh FOREIGN KEY(MaManHinh) REFERENCES ManHinh(MaManHinh)
@@ -87,11 +88,36 @@ VALUES
 
 INSERT INTO ManHinh
 VALUES
+('ribbThuNgan',N'Màn hình nghiệp vụ thu ngân'),
+('ribbBacSi',N'Màn hình nghiệp vụ bác sĩ'),
+('ribbCaNhan',N'Màn hình cá nhân'),
+('ribbThongKe',N'Màn hình thống kê'),
 ('ribbQuanLy',N'Màn hình quản lý'),
 ('ribbLeTan',N'Màn hình lễ tân')
 
 INSERT INTO PhanQuyen
 VALUES
-('admin','ribbQuanLy',N'Có'),
-('LeTan','ribbQuanLy',N'Không')
-
+('admin','ribbCaNhan',1),
+('LeTan','ribbCaNhan',1),
+('BS','ribbCaNhan',1),
+('ThuNgan','ribbCaNhan',1),
+('BS','ribbQuanLy',0),
+('ThuNgan','ribbQuanLy',0),
+('admin','ribbQuanLy',1),
+('LeTan','ribbQuanLy',0),
+('admin','ribbThongKe',1),
+('LeTan','ribbThongKe',0),
+('BS','ribbThongKe',0),
+('ThuNgan','ribbThongKe',1),
+('admin','ribbLeTan',1),
+('LeTan','ribbLeTan',1),
+('BS','ribbLeTan',0),
+('ThuNgan','ribbLeTan',1),
+('admin','ribbBacSi',1),
+('LeTan','ribbBacSi',0),
+('BS','ribbBacSi',1),
+('ThuNgan','ribbBacSi',0),
+('admin','ribbThuNgan',1),
+('LeTan','ribbThuNgan',1),
+('BS','ribbThuNgan',0),
+('ThuNgan','ribbThuNgan',1)

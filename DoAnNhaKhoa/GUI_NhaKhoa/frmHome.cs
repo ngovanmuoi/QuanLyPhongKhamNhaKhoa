@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI_NhaKhoa.BLL_NhaKhoa;
 
 namespace GUI_NhaKhoa
 {
     public partial class frmHome : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        BLLPhanQuyen phanQuyen = new BLLPhanQuyen();
 
         public string TenNV { get; set; }
         public string Quyen { get; set; }
@@ -27,9 +30,23 @@ namespace GUI_NhaKhoa
 
         private void frmHome_Load(object sender, EventArgs e)
         {
+            
             lblTenNV.Caption = TenNV;
             lblQuyen.Caption = Quyen;
             lblTaiKhoan.Caption = TenDN;
+            LoadData();
+            List<string> nhomND = phanQuyen.GetMaNhomNguoiDung(TenDN);
+
+            foreach (string item in nhomND)
+            {
+                DataTable dsQuyen = phanQuyen.GetMaManHinh(item);
+                foreach (DataRow mh in dsQuyen.Rows)
+                {
+                    FindMenuPhanQuyen(this.ribbon.Pages, mh[1].ToString(), Convert.ToBoolean(mh[2].ToString()));
+                    FindMenuGroupPhanQuyen(this.ribbHeThong.Groups, mh[1].ToString(), Convert.ToBoolean(mh[2].ToString()));
+                }
+            }
+
             frmWellcome frm = new frmWellcome();
             frm.MdiParent = this;
             frm.Show();
@@ -37,10 +54,22 @@ namespace GUI_NhaKhoa
 
         }
 
+        void LoadData()
+        {
+            //if (lblQuyen.Caption == "Lễ Tân")
+            //{
+            //    ribbQuanLy.Visible = false;
+            //    ribbThongKe.Visible = false;
+            //    ribbThuNgan.Visible = false;
+            //    ribbThuNgan.Enabled = false;
+            //    ribbBacSi.Visible = false;
+            //    ribbBacSi.Enabled = false;
+            //}
+        }
         private void btnTiepDonBenNhan_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
-            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();           
+
+            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
             frm.MdiParent = this;
             frm.Show();
 
@@ -106,6 +135,29 @@ namespace GUI_NhaKhoa
             frmPhanQuyen phanQuyen = new frmPhanQuyen();
             phanQuyen.MdiParent = this;
             phanQuyen.Show();
+        }
+
+        private void FindMenuPhanQuyen(RibbonPageCollection items, string pScreenName, bool pEnable)
+        {
+            foreach (RibbonPage menu in items)
+            {
+                if (string.Equals(pScreenName, menu.Tag))
+                {
+                    menu.Visible = pEnable;
+                }
+
+            }
+        }
+        private void FindMenuGroupPhanQuyen(RibbonPageGroupCollection items, string pScreenName, bool pEnable)
+        {
+            foreach (RibbonPageGroup menu in items)
+            {
+                if (string.Equals(pScreenName, menu.Tag))
+                {
+                    menu.Visible = pEnable;
+                }
+
+            }
         }
     }
 }

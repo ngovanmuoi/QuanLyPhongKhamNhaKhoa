@@ -350,6 +350,7 @@ namespace GUI_NhaKhoa
             this.ribbThuNgan});
             this.ribbHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbHeThong.ImageOptions.Image")));
             this.ribbHeThong.Name = "ribbHeThong";
+            this.ribbHeThong.Tag = "ribbHeThong";
             this.ribbHeThong.Text = "Hệ thống";
             // 
             // ribbLeTan
@@ -357,6 +358,7 @@ namespace GUI_NhaKhoa
             this.ribbLeTan.ItemLinks.Add(this.btnTiepDonBenNhan);
             this.ribbLeTan.ItemLinks.Add(this.btnDatLichHen);
             this.ribbLeTan.Name = "ribbLeTan";
+            this.ribbLeTan.Tag = "ribbLeTan";
             this.ribbLeTan.Text = "Nghiệp vụ lễ tân";
             // 
             // ribbBacSi
@@ -364,12 +366,14 @@ namespace GUI_NhaKhoa
             this.ribbBacSi.ItemLinks.Add(this.btnPhongKham);
             this.ribbBacSi.ItemLinks.Add(this.btnLapPhieuKham);
             this.ribbBacSi.Name = "ribbBacSi";
+            this.ribbBacSi.Tag = "ribbBacSi";
             this.ribbBacSi.Text = "Nghiệp vụ bác sĩ";
             // 
             // ribbThuNgan
             // 
             this.ribbThuNgan.ItemLinks.Add(this.btnThuTienDV);
             this.ribbThuNgan.Name = "ribbThuNgan";
+            this.ribbThuNgan.Tag = "ribbThuNgan";
             this.ribbThuNgan.Text = "Nghiệp vụ thu ngân";
             // 
             // ribbQuanLy
@@ -379,6 +383,7 @@ namespace GUI_NhaKhoa
             this.ribbQLPhanMem});
             this.ribbQuanLy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbQuanLy.ImageOptions.Image")));
             this.ribbQuanLy.Name = "ribbQuanLy";
+            this.ribbQuanLy.Tag = "ribbQuanLy";
             this.ribbQuanLy.Text = "Quản Lý";
             // 
             // ribbQLPhongKham
@@ -410,6 +415,7 @@ namespace GUI_NhaKhoa
             this.ribbonPageGroup7});
             this.ribbCaNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbCaNhan.ImageOptions.Image")));
             this.ribbCaNhan.Name = "ribbCaNhan";
+            this.ribbCaNhan.Tag = "ribbCaNhan";
             this.ribbCaNhan.Text = "Cá nhân";
             // 
             // ribbonPageGroup1
@@ -444,6 +450,7 @@ namespace GUI_NhaKhoa
             this.ribbonPageGroup8});
             this.ribbThongKe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbThongKe.ImageOptions.Image")));
             this.ribbThongKe.Name = "ribbThongKe";
+            this.ribbThongKe.Tag = "ribbThongKe";
             this.ribbThongKe.Text = "Thống Kê";
             // 
             // ribbonPageGroup3

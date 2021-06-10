@@ -22,7 +22,52 @@ namespace GUI_NhaKhoa
         private void frmPhanQuyen_Load(object sender, EventArgs e)
         {
             phanQuyen.LayDanhSachNhomND(dtgvDS);
-            phanQuyen.LayDanhSachPhanQuyen(dtgvQuyen);
+        }
+        
+        private void dtgvDS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string manhom = dtgvDS.CurrentRow.Cells[0].Value.ToString();            
+            phanQuyen.LayDanhSachPhanQuyen(dtgvQuyen, manhom);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+            string nhomnguoidung = dtgvDS.CurrentRow.Cells[0].Value.ToString();
+            string mamh = dtgvQuyen.CurrentRow.Cells[0].Value.ToString();
+            bool quyen = bool.Parse(dtgvQuyen.CurrentRow.Cells[2].Value.ToString());           
+
+            try
+            {
+                foreach (DataGridViewRow item in dtgvQuyen.Rows)
+                {
+                    try
+                    {
+                        if (phanQuyen.LuuPhanQuyen(nhomnguoidung, mamh, quyen))
+                        {
+                            //MessageBox.Show("Lưu thành công", "Thông báo");
+                            phanQuyen.LayDanhSachPhanQuyen(dtgvQuyen, nhomnguoidung);
+                        }
+                        else
+                            //MessageBox.Show("Lưu thất bại", "Thông báo");
+                            phanQuyen.LayDanhSachPhanQuyen(dtgvQuyen, nhomnguoidung);
+                    }
+                    catch
+                    {
+                        //MessageBox.Show("Lưu thất bại", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    }
+                }
+                MessageBox.Show("Lưu thành công", "Thông báo");
+            }
+            catch
+            {
+                MessageBox.Show("Lưu thất bại", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dtgvQuyen_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //
         }
     }
 }
