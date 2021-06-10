@@ -39,7 +39,7 @@ namespace GUI_NhaKhoa
 
             foreach (string item in nhomND)
             {
-                DataTable dsQuyen = phanQuyen.GetMaManHinh(item);
+                DataTable dsQuyen = phanQuyen.GetMaManHinh2(item);
                 foreach (DataRow mh in dsQuyen.Rows)
                 {
                     FindMenuPhanQuyen(this.ribbon.Pages, mh[1].ToString(), Convert.ToBoolean(mh[2].ToString()));

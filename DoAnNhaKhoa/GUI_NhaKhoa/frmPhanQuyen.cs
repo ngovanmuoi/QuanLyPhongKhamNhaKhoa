@@ -31,16 +31,14 @@ namespace GUI_NhaKhoa
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-            string nhomnguoidung = dtgvDS.CurrentRow.Cells[0].Value.ToString();
-            string mamh = dtgvQuyen.CurrentRow.Cells[0].Value.ToString();
-            bool quyen = bool.Parse(dtgvQuyen.CurrentRow.Cells[2].Value.ToString());           
-
+        {          
             try
             {
+                string nhomnguoidung = dtgvDS.CurrentRow.Cells[0].Value.ToString();
+                string mamh = dtgvQuyen.CurrentRow.Cells[0].Value.ToString();
+                bool quyen = Convert.ToBoolean(dtgvQuyen.CurrentRow.Cells[2].Value.ToString());
                 foreach (DataGridViewRow item in dtgvQuyen.Rows)
-                {
+                {                 
                     try
                     {
                         if (phanQuyen.LuuPhanQuyen(nhomnguoidung, mamh, quyen))

@@ -49,16 +49,40 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             }
             dtgv.DataSource = dt;
         }
-
-        public DataTable GetMaManHinh(string pMaNhom)
+        public DataTable GetMaManHinh2(string pMaNhom)
         {
-            SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-NJSH0L1\\SQLEXPRESS;Initial Catalog=QuanLyNhaKhoa;Integrated Security=True");
+            var quen = (from a in nhakhoa.PhanQuyens
+                        where (a.MaNhom.Trim() == pMaNhom)
+                        select new 
+                        { 
+                            a.MaNhom,
+                            a.MaManHinh,
+                            a.CoQuyen
+                        }).ToList();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM PhanQuyen where MaNhom ='"+pMaNhom +"'",cnn);
-            da.Fill(dt);
+            dt.Columns.Add("Mã Nhóm");
+            dt.Columns.Add("Mã Màn Hình");
+            dt.Columns.Add("CoQuyen");
+            foreach (var TD in quen)
+            {
+                dt.Rows.Add(TD.MaNhom.Trim(), TD.MaManHinh.Trim(), TD.CoQuyen);
+            }
             return dt;
         }
-
+        public DataTable GetMaManHinh3(string pMaNhom)
+        {
+            var quen = (from a in nhakhoa.PhanQuyens
+                        where (a.MaNhom.Trim() == pMaNhom)
+                        select new
+                        {
+                            a.MaNhom,
+                            a.MaManHinh,
+                            a.CoQuyen
+                        }).ToList();
+            DataTable dt = new DataTable();
+            quen.Equals(dt);
+            return dt;
+        }
         public List<string> GetMaNhomNguoiDung(string tenDN)
         {
             List<string> kqMNND = new List<string>();
