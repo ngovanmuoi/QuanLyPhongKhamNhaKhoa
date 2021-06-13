@@ -29,15 +29,10 @@ namespace GUI_NhaKhoa
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTiepDonBenhNhan));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLaySoPhieu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -101,6 +96,12 @@ namespace GUI_NhaKhoa
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnLaySoPhieu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -145,7 +146,7 @@ namespace GUI_NhaKhoa
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1516, 725);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1516, 741);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // groupBox5
@@ -161,9 +162,9 @@ namespace GUI_NhaKhoa
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.Black;
-            this.groupBox5.Location = new System.Drawing.Point(3, 654);
+            this.groupBox5.Location = new System.Drawing.Point(3, 669);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1510, 68);
+            this.groupBox5.Size = new System.Drawing.Size(1510, 69);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Xử lý";
@@ -175,89 +176,12 @@ namespace GUI_NhaKhoa
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.Appearance.Options.UseForeColor = true;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(1299, 21);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(145, 50);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Đóng";
-            // 
-            // btnLaySoPhieu
-            // 
-            this.btnLaySoPhieu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaySoPhieu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLaySoPhieu.Appearance.Options.UseFont = true;
-            this.btnLaySoPhieu.Appearance.Options.UseForeColor = true;
-            this.btnLaySoPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLaySoPhieu.Location = new System.Drawing.Point(1067, 21);
-            this.btnLaySoPhieu.Name = "btnLaySoPhieu";
-            this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
-            this.btnLaySoPhieu.TabIndex = 5;
-            this.btnLaySoPhieu.Text = "Lấy số phiếu";
-            // 
-            // btnIn
-            // 
-            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnIn.Appearance.Options.UseFont = true;
-            this.btnIn.Appearance.Options.UseForeColor = true;
-            this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnIn.Location = new System.Drawing.Point(853, 21);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(145, 50);
-            this.btnIn.TabIndex = 4;
-            this.btnIn.Text = "In";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLuu.Location = new System.Drawing.Point(652, 21);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(145, 50);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.Appearance.Options.UseForeColor = true;
-            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSua.Location = new System.Drawing.Point(451, 21);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(145, 50);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Appearance.Options.UseForeColor = true;
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXoa.Location = new System.Drawing.Point(269, 21);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(145, 50);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Appearance.Options.UseForeColor = true;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnThem.Location = new System.Drawing.Point(77, 21);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(145, 50);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
             // 
             // groupBox1
             // 
@@ -277,7 +201,7 @@ namespace GUI_NhaKhoa
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1510, 175);
+            this.groupBox1.Size = new System.Drawing.Size(1510, 179);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin bệnh nhân";
@@ -545,9 +469,9 @@ namespace GUI_NhaKhoa
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(3, 184);
+            this.groupBox2.Location = new System.Drawing.Point(3, 188);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1510, 175);
+            this.groupBox2.Size = new System.Drawing.Size(1510, 179);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phòng khám";
@@ -783,9 +707,9 @@ namespace GUI_NhaKhoa
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(3, 365);
+            this.groupBox3.Location = new System.Drawing.Point(3, 373);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1510, 102);
+            this.groupBox3.Size = new System.Drawing.Size(1510, 105);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin khám";
@@ -847,9 +771,9 @@ namespace GUI_NhaKhoa
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(3, 473);
+            this.groupBox4.Location = new System.Drawing.Point(3, 484);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1510, 175);
+            this.groupBox4.Size = new System.Drawing.Size(1510, 179);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách tiếp đón";
@@ -864,11 +788,95 @@ namespace GUI_NhaKhoa
             this.dataGridView1.Size = new System.Drawing.Size(1453, 122);
             this.dataGridView1.TabIndex = 0;
             // 
+            // btnLaySoPhieu
+            // 
+            this.btnLaySoPhieu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaySoPhieu.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLaySoPhieu.Appearance.Options.UseFont = true;
+            this.btnLaySoPhieu.Appearance.Options.UseForeColor = true;
+            this.btnLaySoPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLaySoPhieu.ImageOptions.Image = global::GUI_NhaKhoa.Properties.Resources.icon_stt;
+            this.btnLaySoPhieu.Location = new System.Drawing.Point(1067, 21);
+            this.btnLaySoPhieu.Name = "btnLaySoPhieu";
+            this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
+            this.btnLaySoPhieu.TabIndex = 5;
+            this.btnLaySoPhieu.Text = "Lấy số phiếu";
+            // 
+            // btnIn
+            // 
+            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnIn.Appearance.Options.UseFont = true;
+            this.btnIn.Appearance.Options.UseForeColor = true;
+            this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
+            this.btnIn.Location = new System.Drawing.Point(853, 21);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(145, 50);
+            this.btnIn.TabIndex = 4;
+            this.btnIn.Text = "In";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(652, 21);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(145, 50);
+            this.btnLuu.TabIndex = 3;
+            this.btnLuu.Text = "Lưu";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.Appearance.Options.UseForeColor = true;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(451, 21);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(145, 50);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.Appearance.Options.UseForeColor = true;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(269, 21);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(145, 50);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xóa";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.Appearance.Options.UseForeColor = true;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(77, 21);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(145, 50);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            // 
             // frmTiepDonBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1516, 725);
+            this.ClientSize = new System.Drawing.Size(1516, 741);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmTiepDonBenhNhan";
             this.Text = "Tiếp đón bệnh nhân";

@@ -97,17 +97,17 @@ namespace GUI_NhaKhoa
                     {
                         LoadData();
                         nguoiDung.LayThongTin(dtgvDS);
-                        MessageBox.Show("Xóa tài khoản người dùng thành công");
+                        MessageBox.Show("Xóa tài khoản người dùng thành công", "Thông báo");
                     }    
                     else
                     {
-                        MessageBox.Show("Bạn chưa chọn tài khoản người dùng cần xóa");
+                        MessageBox.Show("Bạn chưa chọn tài khoản người dùng cần xóa", "Thông báo");
                     }    
                     
                 }
                 catch
                 {
-                    MessageBox.Show("Xóa tài khoản người dùng thất bại");
+                    MessageBox.Show("Xóa tài khoản người dùng thất bại", "Thông báo");
                 }
             }            
         }

@@ -145,6 +145,8 @@ E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\es\DevExpress.Office.v19.2.Core.resources.dll
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\ja\DevExpress.Office.v19.2.Core.resources.dll
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
-E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csprojAssemblyReference.cache
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csproj.CoreCompileInputs.cache
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csproj.CopyComplete
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmQuanLyBenhNhan.resources
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmQuanLyNhanVien.resources
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csprojAssemblyReference.cache

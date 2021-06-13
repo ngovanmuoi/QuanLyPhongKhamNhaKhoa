@@ -53,7 +53,13 @@ namespace GUI_NhaKhoa
             this.ClientSize = new Size(frm.Size.Width, frm.Size.Height + 190);
 
         }
-
+        public void DongTatCaCacTab()
+        {
+            for (int i = xtraTabbedMdiManager1.Pages.Count - 1; i >= 0; i--)
+            {
+                xtraTabbedMdiManager1.Pages[i].MdiChild.Close();
+            }
+        }
         void LoadData()
         {
             //if (lblQuyen.Caption == "Lễ Tân")
@@ -68,7 +74,7 @@ namespace GUI_NhaKhoa
         }
         private void btnTiepDonBenNhan_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            DongTatCaCacTab();
             frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
             frm.MdiParent = this;
             frm.Show();
@@ -111,13 +117,20 @@ namespace GUI_NhaKhoa
 
         private void btnQLNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //Form1 form1 = new Form1();
-            //form1.MdiParent = this;
-            //form1.Show();
+            DongTatCaCacTab();
+            int dai = 0;
+            int rong = 0;
+            frmQuanLyNhanVien nhanVien = new frmQuanLyNhanVien();
+            rong = nhanVien.Size.Width;
+            dai = nhanVien.Size.Height;
+            nhanVien.MdiParent = this;
+            nhanVien.Show();
+            this.ClientSize = new Size(rong, dai + 190);
         }
 
         private void btnQLNhomNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
         {
+            DongTatCaCacTab();
             frmNhomNguoiDung nhomNguoiDung = new frmNhomNguoiDung();
             nhomNguoiDung.MdiParent = this;
             nhomNguoiDung.Show();
@@ -125,6 +138,7 @@ namespace GUI_NhaKhoa
 
         private void btnDMManHinh_ItemClick(object sender, ItemClickEventArgs e)
         {
+            DongTatCaCacTab();
             frmManHinh manHinh = new frmManHinh();
             manHinh.MdiParent = this;
             manHinh.Show();
@@ -132,6 +146,7 @@ namespace GUI_NhaKhoa
 
         private void btnPhanQuyen_ItemClick(object sender, ItemClickEventArgs e)
         {
+            DongTatCaCacTab();            
             frmPhanQuyen phanQuyen = new frmPhanQuyen();
             phanQuyen.MdiParent = this;
             phanQuyen.Show();
@@ -158,6 +173,19 @@ namespace GUI_NhaKhoa
                 }
 
             }
+        }
+
+        private void btnQLBenhNhan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DongTatCaCacTab();
+            int dai = 0;
+            int rong = 0;
+            frmQuanLyBenhNhan benhNhan = new frmQuanLyBenhNhan();
+            rong = benhNhan.Size.Width;
+            dai = benhNhan.Size.Height;
+            benhNhan.MdiParent = this;
+            benhNhan.Show();
+            this.ClientSize = new Size(rong, dai + 190);
         }
     }
 }

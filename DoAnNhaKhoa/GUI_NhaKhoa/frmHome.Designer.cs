@@ -241,6 +241,7 @@ namespace GUI_NhaKhoa
             this.btnQLBenhNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLBenhNhan.ImageOptions.Image")));
             this.btnQLBenhNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLBenhNhan.ImageOptions.LargeImage")));
             this.btnQLBenhNhan.Name = "btnQLBenhNhan";
+            this.btnQLBenhNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLBenhNhan_ItemClick);
             // 
             // lblTaiKhoan
             // 

@@ -56,10 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_NhaKhoa\BLLBenhNhan.cs" />
     <Compile Include="BLL_NhaKhoa\BLLConfig.cs" />
     <Compile Include="BLL_NhaKhoa\BLLDangNhap.cs" />
     <Compile Include="BLL_NhaKhoa\BLLManHinh.cs" />
     <Compile Include="BLL_NhaKhoa\BLLNguoiDung.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLNhanVien.cs" />
     <Compile Include="BLL_NhaKhoa\BLLNhomNguoiDung.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhanQuyen.cs" />
     <Compile Include="BLL_NhaKhoa\QuanLyNhaKhoa.designer.cs">
@@ -72,6 +74,18 @@
     </Compile>
     <Compile Include="frmPhanQuyen.Designer.cs">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyBenhNhan.Designer.cs">
+      <DependentUpon>frmQuanLyBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemNguoiDungVaoNhom.cs">
       <SubType>Form</SubType>
@@ -134,6 +148,12 @@
     </None>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyBenhNhan.resx">
+      <DependentUpon>frmQuanLyBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyNhanVien.resx">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemNguoiDungVaoNhom.resx">
       <DependentUpon>frmThemNguoiDungVaoNhom.cs</DependentUpon>
@@ -238,6 +258,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-stt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

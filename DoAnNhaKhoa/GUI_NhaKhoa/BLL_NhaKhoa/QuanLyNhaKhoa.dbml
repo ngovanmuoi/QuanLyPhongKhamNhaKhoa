@@ -57,4 +57,16 @@
       <Association Name="NhomNguoiDung_PhanQuyen" Member="NhomNguoiDung" ThisKey="MaNhom" OtherKey="MaNhom" Type="NhomNguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.BenhNhan" Member="BenhNhans">
+    <Type Name="BenhNhan">
+      <Column Name="MaBenhNhan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaThe" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

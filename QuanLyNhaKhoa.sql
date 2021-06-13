@@ -55,6 +55,18 @@ CREATE TABLE PhanQuyen
 	CONSTRAINT FK_PhanQuyen_NhomNguoiDung FOREIGN KEY(MaNhom) REFERENCES NhomNguoiDung(MaNhom),
 	CONSTRAINT FK_PhanQuyen_ManHinh FOREIGN KEY(MaManHinh) REFERENCES ManHinh(MaManHinh)
 )
+CREATE TABLE BenhNhan
+(
+	MaBenhNhan VARCHAR (10) NOT NULL,
+	MaThe VARCHAR (10),
+	HoTen NVARCHAR (50),
+	GioiTinh NVARCHAR (4),
+	NgaySinh DATE,
+	DiaChi NVARCHAR (100),
+	SDT VARCHAR (12),
+	Email VARCHAR(50),
+	PRIMARY KEY(MaBenhNhan)
+)
 GO
 
 --NHẬP DỮ LIỆU
@@ -121,3 +133,17 @@ VALUES
 ('LeTan','ribbThuNgan',1),
 ('BS','ribbThuNgan',0),
 ('ThuNgan','ribbThuNgan',1)
+
+SET DATEFORMAT DMY
+INSERT INTO BenhNhan
+VALUES
+('BN001', '', N'Viên Vịnh Nghi', N'Nữ', '02/03/1991', N'61/11, Đường Liên Khu 5 - 6, Phường Bình Hưng Hoà B, Quận Bình Tân', '0365882156', 'nghitv@gmail.com'),
+('BN002', '', N'Ngô Mạnh Đạt', N'Nam', '11/06/1988', N'12 Đường số 66, Phường 10, Quận 6', '0326510015', 'datmocsung@gmail.com'),
+('BN003', '', N'Khưu Thục Trinh', N'Nữ', '10/03/1990', N'75, Long Thuận, Phường Trường Thạnh, Quận 9', '0935125572', 'trinh123@gmail.com'),
+('BN004', '', N'Trương Mẫn', N'Nữ', '23/05/1993', N'112 Đường Nguyễn Đình Chiểu, Phường 4, Quận Phú Nhuận', '0123452568', 'manman@gmail.com'),
+('BN005', '', N'Trương Quốc Vinh', N'Nam', '28/04/1991', N'79, Đường Giải Phóng, Phường 4, Quận Tân Bình', '0932561004', 'quocvinh@gmail.com'),
+('BN006', '', N'Lưu Đức Hoa', N'Nam', '06/12/1989', N'281/2, Phường 13, Quận Bình Thạnh', '0123005699', 'luuhoa11@gmail.com'),
+('BN007', '', N'Lý Liên Kiệt', N'Nam', '17/12/1994', N'79, Đường Trung Chánh, Phường Trung Mỹ Tây, Quận 12', '0935122452', 'lykiet102@gmail.com'),
+('BN008', '', N'Phạm Băng Băng', N'Nữ', '10/01/1995', N'111 Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh', '0389802451', 'bangcute@gmail.com'),
+('BN009', '', N'Triệu Hựu Đình', N'Nam', '03/08/1992', N'76 Đường Phan Xích Long, Phường 7, Quận Phú Nhuận', '0914563652', 'dinh3sinh@gmail.com'),
+('BN010', '', N'Triệu Lệ Dĩnh', N'Nữ', '26/12/1993', N'Đường 16, Phường Tân Phú, Quận 7', '0989651246', 'bedinhdethuong@gmail.com')
