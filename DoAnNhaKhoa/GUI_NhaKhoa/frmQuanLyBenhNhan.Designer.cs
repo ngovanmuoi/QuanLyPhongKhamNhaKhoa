@@ -43,6 +43,7 @@ namespace GUI_NhaKhoa
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,18 +61,18 @@ namespace GUI_NhaKhoa
             this.txtMaBN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.dtgvDS = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new DevExpress.XtraEditors.ButtonEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.grTimKiem = new DevExpress.XtraEditors.GroupControl();
             this.label14 = new System.Windows.Forms.Label();
             this.cbbLocGT = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtTimKiem = new DevExpress.XtraEditors.ButtonEdit();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.dtgvDS = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -82,14 +83,13 @@ namespace GUI_NhaKhoa
             ((System.ComponentModel.ISupportInitialize)(this.txtMaThe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbGioiTinh.Properties)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grTimKiem)).BeginInit();
+            this.grTimKiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLocGT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLocGT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -160,6 +160,7 @@ namespace GUI_NhaKhoa
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnReload
             // 
@@ -174,6 +175,7 @@ namespace GUI_NhaKhoa
             this.btnReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnLuu
             // 
@@ -188,6 +190,7 @@ namespace GUI_NhaKhoa
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -202,6 +205,7 @@ namespace GUI_NhaKhoa
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -216,6 +220,7 @@ namespace GUI_NhaKhoa
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -230,6 +235,22 @@ namespace GUI_NhaKhoa
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.46809F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.53192F));
+            this.tableLayoutPanel2.Controls.Add(this.groupControl2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.grTimKiem, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 75);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1566, 175);
+            this.tableLayoutPanel2.TabIndex = 5;
             // 
             // groupControl2
             // 
@@ -423,34 +444,70 @@ namespace GUI_NhaKhoa
             this.cbbGioiTinh.Size = new System.Drawing.Size(238, 26);
             this.cbbGioiTinh.TabIndex = 16;
             // 
-            // tableLayoutPanel2
+            // grTimKiem
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.46809F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.53192F));
-            this.tableLayoutPanel2.Controls.Add(this.groupControl2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.groupControl3, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 75);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1566, 175);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.grTimKiem.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl3.CaptionImageOptions.SvgImage")));
+            this.grTimKiem.Controls.Add(this.label14);
+            this.grTimKiem.Controls.Add(this.cbbLocGT);
+            this.grTimKiem.Controls.Add(this.txtTimKiem);
+            this.grTimKiem.Controls.Add(this.label13);
+            this.grTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grTimKiem.Location = new System.Drawing.Point(1169, 3);
+            this.grTimKiem.Name = "grTimKiem";
+            this.grTimKiem.Size = new System.Drawing.Size(394, 169);
+            this.grTimKiem.TabIndex = 5;
+            this.grTimKiem.Text = "Tìm kiếm";
             // 
-            // groupControl3
+            // label14
             // 
-            this.groupControl3.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl3.CaptionImageOptions.SvgImage")));
-            this.groupControl3.Controls.Add(this.label14);
-            this.groupControl3.Controls.Add(this.cbbLocGT);
-            this.groupControl3.Controls.Add(this.txtTimKiem);
-            this.groupControl3.Controls.Add(this.label13);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(1169, 3);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(394, 169);
-            this.groupControl3.TabIndex = 5;
-            this.groupControl3.Text = "Tìm kiếm";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 116);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 22);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Giới Tính";
+            // 
+            // cbbLocGT
+            // 
+            this.cbbLocGT.EditValue = "Tất Cả";
+            this.cbbLocGT.Location = new System.Drawing.Point(153, 114);
+            this.cbbLocGT.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbLocGT.Name = "cbbLocGT";
+            this.cbbLocGT.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLocGT.Properties.Appearance.Options.UseFont = true;
+            this.cbbLocGT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbLocGT.Properties.Items.AddRange(new object[] {
+            "Tất Cả",
+            "Nam",
+            "Nữ"});
+            this.cbbLocGT.Size = new System.Drawing.Size(234, 26);
+            this.cbbLocGT.TabIndex = 25;
+            this.cbbLocGT.TextChanged += new System.EventHandler(this.cbbLocGT_TextChanged);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(153, 71);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Properties.Appearance.Options.UseFont = true;
+            this.txtTimKiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
+            this.txtTimKiem.Size = new System.Drawing.Size(234, 26);
+            this.txtTimKiem.TabIndex = 24;
+            this.txtTimKiem.EditValueChanged += new System.EventHandler(this.txtTimKiem_EditValueChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 74);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 22);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Tên Bệnh Nhân";
             // 
             // groupControl4
             // 
@@ -504,55 +561,6 @@ namespace GUI_NhaKhoa
             this.dtgvDS.TabIndex = 2;
             this.dtgvDS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDS_CellClick);
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(153, 71);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Properties.Appearance.Options.UseFont = true;
-            this.txtTimKiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
-            this.txtTimKiem.Size = new System.Drawing.Size(234, 26);
-            this.txtTimKiem.TabIndex = 24;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 74);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 22);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Tên Bệnh Nhân";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(8, 116);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 22);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Giới Tính";
-            // 
-            // cbbLocGT
-            // 
-            this.cbbLocGT.EditValue = "Tất Cả";
-            this.cbbLocGT.Location = new System.Drawing.Point(153, 114);
-            this.cbbLocGT.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbLocGT.Name = "cbbLocGT";
-            this.cbbLocGT.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLocGT.Properties.Appearance.Options.UseFont = true;
-            this.cbbLocGT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLocGT.Properties.Items.AddRange(new object[] {
-            "Tất Cả",
-            "Nam",
-            "Nữ"});
-            this.cbbLocGT.Size = new System.Drawing.Size(234, 26);
-            this.cbbLocGT.TabIndex = 25;
-            // 
             // frmQuanLyBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,6 +575,7 @@ namespace GUI_NhaKhoa
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -578,15 +587,14 @@ namespace GUI_NhaKhoa
             ((System.ComponentModel.ISupportInitialize)(this.txtMaThe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbGioiTinh.Properties)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grTimKiem)).EndInit();
+            this.grTimKiem.ResumeLayout(false);
+            this.grTimKiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLocGT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLocGT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,7 +629,7 @@ namespace GUI_NhaKhoa
         private DevExpress.XtraEditors.TextEdit txtSDT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl grTimKiem;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private System.Windows.Forms.DataGridView dtgvDS;
         private DevExpress.XtraEditors.ButtonEdit txtTimKiem;
