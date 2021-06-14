@@ -64,6 +64,7 @@
     <Compile Include="BLL_NhaKhoa\BLLNhanVien.cs" />
     <Compile Include="BLL_NhaKhoa\BLLNhomNguoiDung.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhanQuyen.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLTiepDonBenhNhan.cs" />
     <Compile Include="BLL_NhaKhoa\QuanLyNhaKhoa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

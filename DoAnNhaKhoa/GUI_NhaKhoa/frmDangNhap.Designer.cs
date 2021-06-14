@@ -47,6 +47,7 @@ namespace GUI_NhaKhoa
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(208, 30);
             this.txtMatKhau.TabIndex = 24;
+            this.txtMatKhau.Text = "123";
             // 
             // txtTaiKhoan
             // 
@@ -55,6 +56,7 @@ namespace GUI_NhaKhoa
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(208, 30);
             this.txtTaiKhoan.TabIndex = 23;
+            this.txtTaiKhoan.Text = "ngo10";
             // 
             // label3
             // 

@@ -75,9 +75,10 @@ namespace GUI_NhaKhoa
         private void btnTiepDonBenNhan_ItemClick(object sender, ItemClickEventArgs e)
         {
             DongTatCaCacTab();
-            frmTiepDonBenhNhan frm = new frmTiepDonBenhNhan();
-            frm.MdiParent = this;
-            frm.Show();
+            frmTiepDonBenhNhan tiepDonBenhNhan = new frmTiepDonBenhNhan();
+            tiepDonBenhNhan.TiepDon = lblTenNV.Caption;
+            tiepDonBenhNhan.MdiParent = this;
+            tiepDonBenhNhan.Show();
 
         }
 

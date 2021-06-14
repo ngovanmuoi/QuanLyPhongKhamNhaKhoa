@@ -33,6 +33,12 @@ namespace GUI_NhaKhoa
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLaySoPhieu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -46,8 +52,7 @@ namespace GUI_NhaKhoa
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtTuoi = new System.Windows.Forms.TextBox();
-            this.txtNamSinh = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnThemBN = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,11 +60,9 @@ namespace GUI_NhaKhoa
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbbMaBN = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbLoaiKham = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -83,7 +86,7 @@ namespace GUI_NhaKhoa
             this.label20 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtNgay = new DevExpress.XtraEditors.DateEdit();
+            this.cbbNgayKham = new DevExpress.XtraEditors.DateEdit();
             this.label21 = new System.Windows.Forms.Label();
             this.txtSoPhieu = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -96,12 +99,9 @@ namespace GUI_NhaKhoa
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLaySoPhieu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.cbbLoaiKham = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbMaBN = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.cbbMaBNView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,13 +119,16 @@ namespace GUI_NhaKhoa
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel15.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -182,6 +185,90 @@ namespace GUI_NhaKhoa
             this.btnThoat.Size = new System.Drawing.Size(145, 50);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Đóng";
+            // 
+            // btnLaySoPhieu
+            // 
+            this.btnLaySoPhieu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaySoPhieu.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLaySoPhieu.Appearance.Options.UseFont = true;
+            this.btnLaySoPhieu.Appearance.Options.UseForeColor = true;
+            this.btnLaySoPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLaySoPhieu.ImageOptions.Image = global::GUI_NhaKhoa.Properties.Resources.icon_stt;
+            this.btnLaySoPhieu.Location = new System.Drawing.Point(1067, 21);
+            this.btnLaySoPhieu.Name = "btnLaySoPhieu";
+            this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
+            this.btnLaySoPhieu.TabIndex = 5;
+            this.btnLaySoPhieu.Text = "Lấy số phiếu";
+            // 
+            // btnIn
+            // 
+            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnIn.Appearance.Options.UseFont = true;
+            this.btnIn.Appearance.Options.UseForeColor = true;
+            this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
+            this.btnIn.Location = new System.Drawing.Point(853, 21);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(145, 50);
+            this.btnIn.TabIndex = 4;
+            this.btnIn.Text = "In";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(652, 21);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(145, 50);
+            this.btnLuu.TabIndex = 3;
+            this.btnLuu.Text = "Lưu";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.Appearance.Options.UseForeColor = true;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(451, 21);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(145, 50);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.Appearance.Options.UseForeColor = true;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(269, 21);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(145, 50);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xóa";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.Appearance.Options.UseForeColor = true;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.Location = new System.Drawing.Point(77, 21);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(145, 50);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
             // 
             // groupBox1
             // 
@@ -303,37 +390,28 @@ namespace GUI_NhaKhoa
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txtTuoi);
-            this.panel4.Controls.Add(this.txtNamSinh);
+            this.panel4.Controls.Add(this.txtNgaySinh);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(787, 76);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(361, 39);
             this.panel4.TabIndex = 5;
             // 
-            // txtTuoi
+            // txtNgaySinh
             // 
-            this.txtTuoi.Location = new System.Drawing.Point(266, 2);
-            this.txtTuoi.Name = "txtTuoi";
-            this.txtTuoi.ReadOnly = true;
-            this.txtTuoi.Size = new System.Drawing.Size(92, 30);
-            this.txtTuoi.TabIndex = 3;
-            // 
-            // txtNamSinh
-            // 
-            this.txtNamSinh.Location = new System.Drawing.Point(132, 2);
-            this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(95, 30);
-            this.txtNamSinh.TabIndex = 2;
+            this.txtNgaySinh.Location = new System.Drawing.Point(132, 2);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(226, 30);
+            this.txtNgaySinh.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 22);
+            this.label8.Size = new System.Drawing.Size(91, 22);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Năm / Tuổi";
+            this.label8.Text = "Ngày Sinh";
             // 
             // btnThemBN
             // 
@@ -345,6 +423,7 @@ namespace GUI_NhaKhoa
             this.btnThemBN.TabIndex = 5;
             this.btnThemBN.Text = "Thêm mới bệnh nhân";
             this.btnThemBN.UseVisualStyleBackColor = false;
+            this.btnThemBN.Click += new System.EventHandler(this.btnThemBN_Click);
             // 
             // panel3
             // 
@@ -384,21 +463,13 @@ namespace GUI_NhaKhoa
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbbMaBN);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.cbbMaBN);
             this.panel2.Location = new System.Drawing.Point(21, 75);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 39);
             this.panel2.TabIndex = 3;
-            // 
-            // cbbMaBN
-            // 
-            this.cbbMaBN.FormattingEnabled = true;
-            this.cbbMaBN.Location = new System.Drawing.Point(143, 2);
-            this.cbbMaBN.Name = "cbbMaBN";
-            this.cbbMaBN.Size = new System.Drawing.Size(354, 30);
-            this.cbbMaBN.TabIndex = 2;
             // 
             // label3
             // 
@@ -428,14 +499,6 @@ namespace GUI_NhaKhoa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 39);
             this.panel1.TabIndex = 1;
-            // 
-            // cbbLoaiKham
-            // 
-            this.cbbLoaiKham.FormattingEnabled = true;
-            this.cbbLoaiKham.Location = new System.Drawing.Point(143, 2);
-            this.cbbLoaiKham.Name = "cbbLoaiKham";
-            this.cbbLoaiKham.Size = new System.Drawing.Size(354, 30);
-            this.cbbLoaiKham.TabIndex = 2;
             // 
             // label2
             // 
@@ -640,7 +703,7 @@ namespace GUI_NhaKhoa
             // panel14
             // 
             this.panel14.Controls.Add(this.label23);
-            this.panel14.Controls.Add(this.txtNgay);
+            this.panel14.Controls.Add(this.cbbNgayKham);
             this.panel14.Controls.Add(this.label21);
             this.panel14.Controls.Add(this.txtSoPhieu);
             this.panel14.Controls.Add(this.label22);
@@ -659,19 +722,19 @@ namespace GUI_NhaKhoa
             this.label23.TabIndex = 3;
             this.label23.Text = "*";
             // 
-            // txtNgay
+            // cbbNgayKham
             // 
-            this.txtNgay.EditValue = null;
-            this.txtNgay.Location = new System.Drawing.Point(425, 4);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgay.Properties.Appearance.Options.UseFont = true;
-            this.txtNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbbNgayKham.EditValue = null;
+            this.cbbNgayKham.Location = new System.Drawing.Point(425, 4);
+            this.cbbNgayKham.Name = "cbbNgayKham";
+            this.cbbNgayKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNgayKham.Properties.Appearance.Options.UseFont = true;
+            this.cbbNgayKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbbNgayKham.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNgay.Size = new System.Drawing.Size(275, 32);
-            this.txtNgay.TabIndex = 3;
+            this.cbbNgayKham.Size = new System.Drawing.Size(275, 32);
+            this.cbbNgayKham.TabIndex = 3;
             // 
             // label21
             // 
@@ -788,89 +851,43 @@ namespace GUI_NhaKhoa
             this.dataGridView1.Size = new System.Drawing.Size(1453, 122);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btnLaySoPhieu
+            // cbbLoaiKham
             // 
-            this.btnLaySoPhieu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLaySoPhieu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLaySoPhieu.Appearance.Options.UseFont = true;
-            this.btnLaySoPhieu.Appearance.Options.UseForeColor = true;
-            this.btnLaySoPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLaySoPhieu.ImageOptions.Image = global::GUI_NhaKhoa.Properties.Resources.icon_stt;
-            this.btnLaySoPhieu.Location = new System.Drawing.Point(1067, 21);
-            this.btnLaySoPhieu.Name = "btnLaySoPhieu";
-            this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
-            this.btnLaySoPhieu.TabIndex = 5;
-            this.btnLaySoPhieu.Text = "Lấy số phiếu";
+            this.cbbLoaiKham.Location = new System.Drawing.Point(143, 3);
+            this.cbbLoaiKham.Name = "cbbLoaiKham";
+            this.cbbLoaiKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiKham.Properties.Appearance.Options.UseFont = true;
+            this.cbbLoaiKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbLoaiKham.Properties.Items.AddRange(new object[] {
+            "Khám miễn phí",
+            "Tái khám"});
+            this.cbbLoaiKham.Size = new System.Drawing.Size(354, 28);
+            this.cbbLoaiKham.TabIndex = 3;
+            this.cbbLoaiKham.TextChanged += new System.EventHandler(this.cbbLoaiKham_TextChanged);
             // 
-            // btnIn
+            // cbbMaBN
             // 
-            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnIn.Appearance.Options.UseFont = true;
-            this.btnIn.Appearance.Options.UseForeColor = true;
-            this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
-            this.btnIn.Location = new System.Drawing.Point(853, 21);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(145, 50);
-            this.btnIn.TabIndex = 4;
-            this.btnIn.Text = "In";
+            this.cbbMaBN.Location = new System.Drawing.Point(143, 1);
+            this.cbbMaBN.Name = "cbbMaBN";
+            this.cbbMaBN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaBN.Properties.Appearance.Options.UseFont = true;
+            this.cbbMaBN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbMaBN.Properties.DataSource = typeof(GUI_NhaKhoa.BLL_NhaKhoa.BenhNhan);
+            this.cbbMaBN.Properties.NullText = "";
+            this.cbbMaBN.Properties.PopupView = this.cbbMaBNView;
+            this.cbbMaBN.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
+            this.cbbMaBN.Size = new System.Drawing.Size(354, 28);
+            this.cbbMaBN.TabIndex = 7;
+            this.cbbMaBN.TextChanged += new System.EventHandler(this.cbbMaBN_TextChanged);
             // 
-            // btnLuu
+            // cbbMaBNView
             // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(652, 21);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(145, 50);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.Appearance.Options.UseForeColor = true;
-            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(451, 21);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(145, 50);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Appearance.Options.UseForeColor = true;
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(269, 21);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(145, 50);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Appearance.Options.UseForeColor = true;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(77, 21);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(145, 50);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
+            this.cbbMaBNView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.cbbMaBNView.Name = "cbbMaBNView";
+            this.cbbMaBNView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.cbbMaBNView.OptionsView.ShowGroupPanel = false;
             // 
             // frmTiepDonBenhNhan
             // 
@@ -880,6 +897,7 @@ namespace GUI_NhaKhoa
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmTiepDonBenhNhan";
             this.Text = "Tiếp đón bệnh nhân";
+            this.Load += new System.EventHandler(this.frmTiepDonBenhNhan_Load_1);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -912,8 +930,8 @@ namespace GUI_NhaKhoa
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -921,6 +939,9 @@ namespace GUI_NhaKhoa
             this.panel15.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -949,8 +970,7 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtTuoi;
-        private System.Windows.Forms.TextBox txtNamSinh;
+        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnThemBN;
         private System.Windows.Forms.Panel panel3;
@@ -958,11 +978,9 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbbMaBN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbbLoaiKham;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -986,7 +1004,7 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label23;
-        private DevExpress.XtraEditors.DateEdit txtNgay;
+        private DevExpress.XtraEditors.DateEdit cbbNgayKham;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtSoPhieu;
         private System.Windows.Forms.Label label22;
@@ -999,5 +1017,8 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbLoaiKham;
+        private DevExpress.XtraEditors.SearchLookUpEdit cbbMaBN;
+        private DevExpress.XtraGrid.Views.Grid.GridView cbbMaBNView;
     }
 }
