@@ -62,7 +62,10 @@ namespace GUI_NhaKhoa
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbbMaBN = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.cbbMaBNView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbLoaiKham = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -91,17 +94,15 @@ namespace GUI_NhaKhoa
             this.txtSoPhieu = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtBenhSu = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.txtTienSu = new System.Windows.Forms.TextBox();
+            this.cbbHuyetAp = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cbbTimMach = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cbbTieuDuong = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbbLoaiKham = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbbMaBN = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.cbbMaBNView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dtgvDS = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -111,7 +112,10 @@ namespace GUI_NhaKhoa
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -122,13 +126,9 @@ namespace GUI_NhaKhoa
             ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel15.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -199,6 +199,7 @@ namespace GUI_NhaKhoa
             this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
             this.btnLaySoPhieu.TabIndex = 5;
             this.btnLaySoPhieu.Text = "Lấy số phiếu";
+            this.btnLaySoPhieu.Click += new System.EventHandler(this.btnLaySoPhieu_Click);
             // 
             // btnIn
             // 
@@ -213,6 +214,7 @@ namespace GUI_NhaKhoa
             this.btnIn.Size = new System.Drawing.Size(145, 50);
             this.btnIn.TabIndex = 4;
             this.btnIn.Text = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnLuu
             // 
@@ -227,6 +229,7 @@ namespace GUI_NhaKhoa
             this.btnLuu.Size = new System.Drawing.Size(145, 50);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -241,6 +244,7 @@ namespace GUI_NhaKhoa
             this.btnSua.Size = new System.Drawing.Size(145, 50);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -255,6 +259,7 @@ namespace GUI_NhaKhoa
             this.btnXoa.Size = new System.Drawing.Size(145, 50);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -269,6 +274,7 @@ namespace GUI_NhaKhoa
             this.btnThem.Size = new System.Drawing.Size(145, 50);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -441,6 +447,7 @@ namespace GUI_NhaKhoa
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(560, 30);
             this.txtHoTen.TabIndex = 2;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // label5
             // 
@@ -490,6 +497,29 @@ namespace GUI_NhaKhoa
             this.label4.TabIndex = 0;
             this.label4.Text = "Mã BN";
             // 
+            // cbbMaBN
+            // 
+            this.cbbMaBN.Location = new System.Drawing.Point(143, 1);
+            this.cbbMaBN.Name = "cbbMaBN";
+            this.cbbMaBN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaBN.Properties.Appearance.Options.UseFont = true;
+            this.cbbMaBN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbMaBN.Properties.DataSource = typeof(GUI_NhaKhoa.BLL_NhaKhoa.BenhNhan);
+            this.cbbMaBN.Properties.NullText = "";
+            this.cbbMaBN.Properties.PopupView = this.cbbMaBNView;
+            this.cbbMaBN.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
+            this.cbbMaBN.Size = new System.Drawing.Size(354, 28);
+            this.cbbMaBN.TabIndex = 7;
+            this.cbbMaBN.TextChanged += new System.EventHandler(this.cbbMaBN_TextChanged);
+            // 
+            // cbbMaBNView
+            // 
+            this.cbbMaBNView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.cbbMaBNView.Name = "cbbMaBNView";
+            this.cbbMaBNView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.cbbMaBNView.OptionsView.ShowGroupPanel = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cbbLoaiKham);
@@ -499,6 +529,21 @@ namespace GUI_NhaKhoa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 39);
             this.panel1.TabIndex = 1;
+            // 
+            // cbbLoaiKham
+            // 
+            this.cbbLoaiKham.Location = new System.Drawing.Point(143, 3);
+            this.cbbLoaiKham.Name = "cbbLoaiKham";
+            this.cbbLoaiKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiKham.Properties.Appearance.Options.UseFont = true;
+            this.cbbLoaiKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbLoaiKham.Properties.Items.AddRange(new object[] {
+            "Khám miễn phí",
+            "Tái khám"});
+            this.cbbLoaiKham.Size = new System.Drawing.Size(354, 28);
+            this.cbbLoaiKham.TabIndex = 3;
+            this.cbbLoaiKham.TextChanged += new System.EventHandler(this.cbbLoaiKham_TextChanged);
             // 
             // label2
             // 
@@ -556,6 +601,8 @@ namespace GUI_NhaKhoa
             this.txtTienKham.Name = "txtTienKham";
             this.txtTienKham.Size = new System.Drawing.Size(558, 30);
             this.txtTienKham.TabIndex = 2;
+            this.txtTienKham.Text = "0";
+            this.txtTienKham.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
@@ -680,6 +727,8 @@ namespace GUI_NhaKhoa
             this.cbbPhong.Name = "cbbPhong";
             this.cbbPhong.Size = new System.Drawing.Size(557, 30);
             this.cbbPhong.TabIndex = 2;
+            this.cbbPhong.Text = "Chưa chọn phòng khám";
+            this.cbbPhong.TextChanged += new System.EventHandler(this.cbbPhong_TextChanged);
             // 
             // label19
             // 
@@ -735,6 +784,7 @@ namespace GUI_NhaKhoa
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbbNgayKham.Size = new System.Drawing.Size(275, 32);
             this.cbbNgayKham.TabIndex = 3;
+            this.cbbNgayKham.TextChanged += new System.EventHandler(this.cbbNgayKham_TextChanged);
             // 
             // label21
             // 
@@ -765,7 +815,6 @@ namespace GUI_NhaKhoa
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox3.Controls.Add(this.panel11);
             this.groupBox3.Controls.Add(this.panel15);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -777,60 +826,84 @@ namespace GUI_NhaKhoa
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin khám";
             // 
-            // panel11
+            // panel15
             // 
-            this.panel11.Controls.Add(this.txtBenhSu);
-            this.panel11.Controls.Add(this.label15);
-            this.panel11.Location = new System.Drawing.Point(784, 33);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(693, 39);
-            this.panel11.TabIndex = 7;
+            this.panel15.Controls.Add(this.cbbHuyetAp);
+            this.panel15.Controls.Add(this.label16);
+            this.panel15.Controls.Add(this.cbbTimMach);
+            this.panel15.Controls.Add(this.label15);
+            this.panel15.Controls.Add(this.cbbTieuDuong);
+            this.panel15.Controls.Add(this.label24);
+            this.panel15.Location = new System.Drawing.Point(21, 33);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1203, 39);
+            this.panel15.TabIndex = 6;
             // 
-            // txtBenhSu
+            // cbbHuyetAp
             // 
-            this.txtBenhSu.Location = new System.Drawing.Point(132, 3);
-            this.txtBenhSu.Name = "txtBenhSu";
-            this.txtBenhSu.Size = new System.Drawing.Size(558, 30);
-            this.txtBenhSu.TabIndex = 2;
+            this.cbbHuyetAp.FormattingEnabled = true;
+            this.cbbHuyetAp.Items.AddRange(new object[] {
+            "Trung bình",
+            "Thấp",
+            "Cao"});
+            this.cbbHuyetAp.Location = new System.Drawing.Point(898, 6);
+            this.cbbHuyetAp.Name = "cbbHuyetAp";
+            this.cbbHuyetAp.Size = new System.Drawing.Size(200, 30);
+            this.cbbHuyetAp.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(791, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 22);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Huyết áp";
+            // 
+            // cbbTimMach
+            // 
+            this.cbbTimMach.FormattingEnabled = true;
+            this.cbbTimMach.Items.AddRange(new object[] {
+            "Không",
+            "Có"});
+            this.cbbTimMach.Location = new System.Drawing.Point(506, 4);
+            this.cbbTimMach.Name = "cbbTimMach";
+            this.cbbTimMach.Size = new System.Drawing.Size(194, 30);
+            this.cbbTimMach.TabIndex = 3;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 5);
+            this.label15.Location = new System.Drawing.Point(371, 9);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 22);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Bệnh sử";
+            this.label15.Size = new System.Drawing.Size(126, 22);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Bệnh tim mạch";
             // 
-            // panel15
+            // cbbTieuDuong
             // 
-            this.panel15.Controls.Add(this.txtTienSu);
-            this.panel15.Controls.Add(this.label24);
-            this.panel15.Location = new System.Drawing.Point(21, 33);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(693, 39);
-            this.panel15.TabIndex = 6;
-            // 
-            // txtTienSu
-            // 
-            this.txtTienSu.Location = new System.Drawing.Point(132, 3);
-            this.txtTienSu.Name = "txtTienSu";
-            this.txtTienSu.Size = new System.Drawing.Size(558, 30);
-            this.txtTienSu.TabIndex = 2;
+            this.cbbTieuDuong.FormattingEnabled = true;
+            this.cbbTieuDuong.Items.AddRange(new object[] {
+            "Không",
+            "Có"});
+            this.cbbTieuDuong.Location = new System.Drawing.Point(143, 4);
+            this.cbbTieuDuong.Name = "cbbTieuDuong";
+            this.cbbTieuDuong.Size = new System.Drawing.Size(181, 30);
+            this.cbbTieuDuong.TabIndex = 1;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 5);
+            this.label24.Location = new System.Drawing.Point(3, 7);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 22);
+            this.label24.Size = new System.Drawing.Size(100, 22);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Tiền sử";
+            this.label24.Text = "Tiểu đường";
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.dtgvDS);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
@@ -841,53 +914,21 @@ namespace GUI_NhaKhoa
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách tiếp đón";
             // 
-            // dataGridView1
+            // dtgvDS
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1453, 122);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // cbbLoaiKham
-            // 
-            this.cbbLoaiKham.Location = new System.Drawing.Point(143, 3);
-            this.cbbLoaiKham.Name = "cbbLoaiKham";
-            this.cbbLoaiKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLoaiKham.Properties.Appearance.Options.UseFont = true;
-            this.cbbLoaiKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLoaiKham.Properties.Items.AddRange(new object[] {
-            "Khám miễn phí",
-            "Tái khám"});
-            this.cbbLoaiKham.Size = new System.Drawing.Size(354, 28);
-            this.cbbLoaiKham.TabIndex = 3;
-            this.cbbLoaiKham.TextChanged += new System.EventHandler(this.cbbLoaiKham_TextChanged);
-            // 
-            // cbbMaBN
-            // 
-            this.cbbMaBN.Location = new System.Drawing.Point(143, 1);
-            this.cbbMaBN.Name = "cbbMaBN";
-            this.cbbMaBN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaBN.Properties.Appearance.Options.UseFont = true;
-            this.cbbMaBN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbMaBN.Properties.DataSource = typeof(GUI_NhaKhoa.BLL_NhaKhoa.BenhNhan);
-            this.cbbMaBN.Properties.NullText = "";
-            this.cbbMaBN.Properties.PopupView = this.cbbMaBNView;
-            this.cbbMaBN.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
-            this.cbbMaBN.Size = new System.Drawing.Size(354, 28);
-            this.cbbMaBN.TabIndex = 7;
-            this.cbbMaBN.TextChanged += new System.EventHandler(this.cbbMaBN_TextChanged);
-            // 
-            // cbbMaBNView
-            // 
-            this.cbbMaBNView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.cbbMaBNView.Name = "cbbMaBNView";
-            this.cbbMaBNView.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.cbbMaBNView.OptionsView.ShowGroupPanel = false;
+            this.dtgvDS.AllowUserToAddRows = false;
+            this.dtgvDS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvDS.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDS.Location = new System.Drawing.Point(21, 34);
+            this.dtgvDS.Name = "dtgvDS";
+            this.dtgvDS.ReadOnly = true;
+            this.dtgvDS.RowHeadersWidth = 51;
+            this.dtgvDS.RowTemplate.Height = 24;
+            this.dtgvDS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvDS.Size = new System.Drawing.Size(1453, 122);
+            this.dtgvDS.TabIndex = 0;
+            this.dtgvDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDS_CellContentClick);
             // 
             // frmTiepDonBenhNhan
             // 
@@ -914,8 +955,11 @@ namespace GUI_NhaKhoa
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -933,15 +977,10 @@ namespace GUI_NhaKhoa
             ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbNgayKham.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiKham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMaBNView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1009,16 +1048,17 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.TextBox txtSoPhieu;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox txtBenhSu;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox txtTienSu;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvDS;
         private DevExpress.XtraEditors.ComboBoxEdit cbbLoaiKham;
         private DevExpress.XtraEditors.SearchLookUpEdit cbbMaBN;
         private DevExpress.XtraGrid.Views.Grid.GridView cbbMaBNView;
+        private System.Windows.Forms.ComboBox cbbHuyetAp;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cbbTimMach;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cbbTieuDuong;
     }
 }

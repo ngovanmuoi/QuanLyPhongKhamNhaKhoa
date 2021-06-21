@@ -67,6 +67,32 @@ CREATE TABLE BenhNhan
 	Email VARCHAR(50),
 	PRIMARY KEY(MaBenhNhan)
 )
+CREATE TABLE PhongKham
+(
+	MaPhong VARCHAR(10) NOT NULL,
+	TenPhong NVARCHAR(50),
+	PRIMARY KEY(MaPhong)
+)
+CREATE TABLE TiepDonBenhNhan
+(
+	SoPhieu VARCHAR(10) NOT NULL,
+	NgayKham DATE NOT NULL,
+	LoaiKham NVARCHAR(50),
+	LyDoKham NVARCHAR(50),
+	TieuDuong NVARCHAR(20),
+	BenhTimMach NVARCHAR(20),
+	HuyetAp NVARCHAR(20),
+	TinhTrang NVARCHAR(50),
+	MaBenhNhan VARCHAR (10) NOT NULL,
+	MaPhong VARCHAR(10) NOT NULL,
+	NhanVienTiepDon VARCHAR (10) NOT NULL,
+	BacSi VARCHAR (10),
+	PRIMARY KEY(SoPhieu, NgayKham),
+	CONSTRAINT FK_TiepDonBenhNhan_BenhNhan FOREIGN KEY(MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan),
+	CONSTRAINT FK_TiepDonBenhNhan_PhongKham FOREIGN KEY(MaPhong) REFERENCES PhongKham(MaPhong),
+	CONSTRAINT FK_TiepDonBenhNhan_NhanVien FOREIGN KEY(NhanVienTiepDon) REFERENCES NhanVien(MaNhanVien),
+	CONSTRAINT FK_TiepDonBenhNhan_BacSi FOREIGN KEY(BacSi) REFERENCES NhanVien(MaNhanVien),
+)
 GO
 
 --NHẬP DỮ LIỆU
@@ -91,12 +117,19 @@ INSERT INTO NguoiDung
 VALUES
 ('NV001','ngo10','32441859',N'Hoạt động'),
 ('NV002','duong','32441859',N'Hoạt động'),
-('NV003','don123','32441859',N'Hoạt động')
+('NV003','don123','32441859',N'Hoạt động'),
+('NV004','phat1','32441859',N'Hoạt động'),
+('NV005','giahan','32441859',N'Hoạt động'),
+('NV006','nhu01','32441859',N'Hoạt động')
 
 INSERT INTO NguoiDungNhomNguoiDung
 VALUES
 ('ngo10','admin',N'không có ghi chú'),
-('duong','LeTan',N'hehe')
+('duong','LeTan',N'hehe'),
+('don123','BS',N'chung tử đơn'),
+('phat1','BS',N'anh phát'),
+('giahan','BS',N'hân hân'),
+('nhu01','BS',N'như nè')
 
 INSERT INTO ManHinh
 VALUES
@@ -147,3 +180,14 @@ VALUES
 ('BN008', '', N'Phạm Băng Băng', N'Nữ', '10/01/1995', N'111 Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh', '0389802451', 'bangcute@gmail.com'),
 ('BN009', '', N'Triệu Hựu Đình', N'Nam', '03/08/1992', N'76 Đường Phan Xích Long, Phường 7, Quận Phú Nhuận', '0914563652', 'dinh3sinh@gmail.com'),
 ('BN010', '', N'Triệu Lệ Dĩnh', N'Nữ', '26/12/1993', N'Đường 16, Phường Tân Phú, Quận 7', '0989651246', 'bedinhdethuong@gmail.com')
+
+INSERT INTO PhongKham
+VALUES
+('PK001',N'Phòng Khám 1'),
+('PK002',N'Phòng Khám 2')
+
+SET DATEFORMAT DMY
+INSERT INTO TiepDonBenhNhan
+VALUES
+('PH01-01','17/06/2021', N'Khám miễn phí', N'Khám miệng-chảy máu chân răng', N'Không', N'Không', N'Trung bình',N'Chờ khám', 'BN001', 'PK001', 'NV001', 'NV005'),
+('PH01-01','16/06/2021', N'Khám miễn phí', N'Khám miệng-đau nhức răng hàm', N'Không', N'Không', N'Trung bình', N'Đã Khám', 'BN003', 'PK001', 'NV001', 'NV006')

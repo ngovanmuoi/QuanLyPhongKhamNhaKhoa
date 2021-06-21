@@ -76,6 +76,7 @@ namespace GUI_NhaKhoa
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -111,9 +112,10 @@ namespace GUI_NhaKhoa
             this.btnPhongKham,
             this.btnLapPhieuKham,
             this.btnThuTienDV,
-            this.btnQLThuoc});
+            this.btnQLThuoc,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbHeThong,
@@ -318,6 +320,7 @@ namespace GUI_NhaKhoa
             this.btnPhongKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongKham.ImageOptions.Image")));
             this.btnPhongKham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhongKham.ImageOptions.LargeImage")));
             this.btnPhongKham.Name = "btnPhongKham";
+            this.btnPhongKham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhongKham_ItemClick);
             // 
             // btnLapPhieuKham
             // 
@@ -373,6 +376,7 @@ namespace GUI_NhaKhoa
             // ribbThuNgan
             // 
             this.ribbThuNgan.ItemLinks.Add(this.btnThuTienDV);
+            this.ribbThuNgan.ItemLinks.Add(this.barButtonItem3);
             this.ribbThuNgan.Name = "ribbThuNgan";
             this.ribbThuNgan.Tag = "ribbThuNgan";
             this.ribbThuNgan.Text = "Nghiệp vụ thu ngân";
@@ -476,6 +480,12 @@ namespace GUI_NhaKhoa
             this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "                        ";
+            this.barButtonItem3.Id = 29;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -545,5 +555,6 @@ namespace GUI_NhaKhoa
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbBacSi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbThuNgan;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

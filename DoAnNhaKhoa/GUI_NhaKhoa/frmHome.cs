@@ -188,5 +188,13 @@ namespace GUI_NhaKhoa
             benhNhan.Show();
             this.ClientSize = new Size(rong, dai + 190);
         }
+
+        private void btnPhongKham_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DongTatCaCacTab();
+            frmPhongKham phongKham = new frmPhongKham();
+            phongKham.MdiParent = this;
+            phongKham.Show();
+        }
     }
 }
