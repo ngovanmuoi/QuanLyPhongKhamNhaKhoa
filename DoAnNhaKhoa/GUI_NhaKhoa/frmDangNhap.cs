@@ -98,5 +98,10 @@ namespace GUI_NhaKhoa
                 Application.Exit();
             }
         }
+
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

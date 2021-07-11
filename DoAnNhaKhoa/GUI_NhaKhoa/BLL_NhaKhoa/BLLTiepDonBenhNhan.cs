@@ -40,19 +40,19 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
         }
         public string LayMaBenhNhan(string pHoTen)
         {
-            string ten = "";
-            var Tennv = (from p in nhakhoa.BenhNhans
+            string ma = "";
+            var MaBN = (from p in nhakhoa.BenhNhans
                          where p.HoTen.Trim() == pHoTen
                          select new
                          {
                              p.MaBenhNhan
                          }).ToList();
-            if (Tennv.Count() != 0)
+            if (MaBN.Count() != 0)
             {
-                foreach (var a in Tennv)
-                    ten = a.MaBenhNhan;
+                foreach (var a in MaBN)
+                    ma = a.MaBenhNhan;
             }
-            return ten;
+            return ma;
         }
         public string LayHoTen(string pMaBN)
         {
@@ -93,9 +93,7 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
                     cbbGioiTinh.Text = a.GioiTinh;
                     txtDiaChi.Text = a.DiaChi;
                     txtSDT.Text = a.SDT;
-                }    
-                    
-                
+                }                                      
             }
         }
         public void LayPhongKham(ComboBox cbbPhongKham)
@@ -104,7 +102,7 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             {
                 cbbPhongKham.Items.RemoveAt(i);
             }
-            var dc = from p in nhakhoa.PhongKhams select new { p.TenPhong};
+            var dc = from p in nhakhoa.PhongKhams where( p.MaPhong.Contains("PK")) select new { p.TenPhong};
             foreach (var i in dc)
             {
                 cbbPhongKham.Items.Add(i.TenPhong.Trim());
@@ -214,10 +212,10 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             }
             dtgvTT.DataSource = dt;
         }
-        public DataTable LayDSTiepDonTheoPhong(string pPhong, string pNgay)
+        public DataTable LayDSTiepDonTheoPhong(string pPhong)
         {
             var ds = (from a in nhakhoa.TiepDonBenhNhans
-                        where (a.NgayKham == DateTime.Parse(pNgay) && a.MaPhong == pPhong)
+                        where (a.MaPhong == pPhong)
                         select new
                         {
                             a.SoPhieu,

@@ -58,6 +58,7 @@ namespace GUI_NhaKhoa
             this.btnLapPhieuKham = new DevExpress.XtraBars.BarButtonItem();
             this.btnThuTienDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLThuoc = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbLeTan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbBacSi = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +77,6 @@ namespace GUI_NhaKhoa
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -329,6 +329,7 @@ namespace GUI_NhaKhoa
             this.btnLapPhieuKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLapPhieuKham.ImageOptions.Image")));
             this.btnLapPhieuKham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLapPhieuKham.ImageOptions.LargeImage")));
             this.btnLapPhieuKham.Name = "btnLapPhieuKham";
+            this.btnLapPhieuKham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLapPhieuKham_ItemClick);
             // 
             // btnThuTienDV
             // 
@@ -345,6 +346,12 @@ namespace GUI_NhaKhoa
             this.btnQLThuoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQLThuoc.ImageOptions.Image")));
             this.btnQLThuoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnQLThuoc.ImageOptions.LargeImage")));
             this.btnQLThuoc.Name = "btnQLThuoc";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "                        ";
+            this.barButtonItem3.Id = 29;
+            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // ribbHeThong
             // 
@@ -480,12 +487,6 @@ namespace GUI_NhaKhoa
             this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "                        ";
-            this.barButtonItem3.Id = 29;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -500,6 +501,7 @@ namespace GUI_NhaKhoa
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Trang Chủ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmHome_FormClosed);
             this.Load += new System.EventHandler(this.frmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();

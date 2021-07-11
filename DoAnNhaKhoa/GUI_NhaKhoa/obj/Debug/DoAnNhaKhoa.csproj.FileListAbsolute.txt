@@ -150,7 +150,6 @@ E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmQuanLyBenhNhan.resources
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmQuanLyNhanVien.resources
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmPhongKham.resources
-E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csprojAssemblyReference.cache
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\DevExpress.Utils.v19.2.UI.dll
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.dll
@@ -211,3 +210,6 @@ E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.RPPhieuDangKyKham.resources
 E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.RPSoPhieu.resources
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmPhieuKhamBenh.resources
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\GUI_NhaKhoa.frmPhieuDichVu.resources
+E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\DoAnNhaKhoa\GUI_NhaKhoa\obj\Debug\DoAnNhaKhoa.csprojAssemblyReference.cache

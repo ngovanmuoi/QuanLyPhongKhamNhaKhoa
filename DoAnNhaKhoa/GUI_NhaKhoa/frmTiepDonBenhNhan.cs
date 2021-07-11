@@ -155,18 +155,18 @@ namespace GUI_NhaKhoa
         {
             //try
             //{
-            DataTable dt = tiepDonBenhNhan.LayDSTiepDonTheoPhong(pPhong, cbbNgayKham.Text);
+            DataTable dt = tiepDonBenhNhan.LayDSTiepDonTheoPhong(pPhong);
             int count = dt.Rows.Count;
             string phieu = "";
             string soPhieuMoi = "";
             int soPhieu = 0;
             if(count == 0 && pPhong == "PK001")
             {
-                return "PH01-01";
+                return "PH01-001";
             }
             else if(count == 0 && pPhong == "PK002")
             {
-                return "PH02-01";
+                return "PH02-001";
             }
             else if( count != 0 && pPhong == "PK001")
             {
@@ -174,15 +174,15 @@ namespace GUI_NhaKhoa
                 soPhieu = Convert.ToInt32((phieu.Remove(0, 5)));
                 if (soPhieu + 1 < 10)
                 {
-                    soPhieuMoi = "PH01-0" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH01-00" + (soPhieu + 1).ToString();
                 }
                 else if (soPhieu + 1 < 100)
                 {
-                    soPhieuMoi = "PH01-" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH01-0" + (soPhieu + 1).ToString();
                 }
                 else if (soPhieu + 1 < 1000)
                 {
-                    soPhieuMoi = "PH01-1" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH01-" + (soPhieu + 1).ToString();
                 }
                 return soPhieuMoi;
             }
@@ -192,15 +192,15 @@ namespace GUI_NhaKhoa
                 soPhieu = Convert.ToInt32((phieu.Remove(0, 5)));
                 if (soPhieu + 1 < 10)
                 {
-                    soPhieuMoi = "PH02-0" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH02-00" + (soPhieu + 1).ToString();
                 }
                 else if (soPhieu + 1 < 100)
                 {
-                    soPhieuMoi = "PH02-" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH02-0" + (soPhieu + 1).ToString();
                 }
                 else if (soPhieu + 1 < 1000)
                 {
-                    soPhieuMoi = "PH02-1" + (soPhieu + 1).ToString();
+                    soPhieuMoi = "PH02-" + (soPhieu + 1).ToString();
                 }
                 return soPhieuMoi;
             }

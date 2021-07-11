@@ -87,11 +87,54 @@ CREATE TABLE TiepDonBenhNhan
 	MaPhong VARCHAR(10) NOT NULL,
 	NhanVienTiepDon VARCHAR (10) NOT NULL,
 	BacSi VARCHAR (10),
-	PRIMARY KEY(SoPhieu, NgayKham),
+	PRIMARY KEY(SoPhieu),
 	CONSTRAINT FK_TiepDonBenhNhan_BenhNhan FOREIGN KEY(MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan),
 	CONSTRAINT FK_TiepDonBenhNhan_PhongKham FOREIGN KEY(MaPhong) REFERENCES PhongKham(MaPhong),
 	CONSTRAINT FK_TiepDonBenhNhan_NhanVien FOREIGN KEY(NhanVienTiepDon) REFERENCES NhanVien(MaNhanVien),
 	CONSTRAINT FK_TiepDonBenhNhan_BacSi FOREIGN KEY(BacSi) REFERENCES NhanVien(MaNhanVien),
+)
+CREATE TABLE PhieuKhamBenh
+(
+	SoPhieu VARCHAR(10) NOT NULL,
+	ChuanDoan NVARCHAR(225),
+	KetLuan NVARCHAR(225) NOT NULL,
+	PRIMARY KEY(SoPhieu),
+	CONSTRAINT FK_PhieuKhamBenh_TiepDonBenhNhan FOREIGN KEY(SoPhieu) REFERENCES TiepDonBenhNhan(SoPhieu)
+)
+CREATE TABLE LoaiDichVu
+(
+	MaLoai VARCHAR(10) NOT NULL,
+	TenLoai NVARCHAR(50),
+	PRIMARY KEY(MaLoai)
+)
+CREATE TABLE DichVu
+(
+	MaDV VARCHAR(10) NOT NULL,
+	TenDV NVARCHAR(100),
+	DonGia INT,
+	DonViTinh NVARCHAR(50),
+	MaLoai VARCHAR(10) NOT NULL,
+	PRIMARY KEY(MaDV),
+	CONSTRAINT FK_DichVu_LoaiDichVu FOREIGN KEY(MaLoai) REFERENCES LoaiDichVu(MaLoai)
+)
+CREATE TABLE PhieuDichVu
+(
+	SoPhieuDV VARCHAR(10) NOT NULL,
+	MaBenhNhan VARCHAR (10) NOT NULL,
+	MaPhong VARCHAR(10) NOT NULL,
+	NgayLap DATE NOT NULL,
+	TinhTrang NVARCHAR(20),
+	TongTien INT,
+	PRIMARY KEY(SoPhieuDV),
+	CONSTRAINT FK_PhieuDV_BenhNhan FOREIGN KEY(MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan)
+)
+CREATE TABLE CTPhieuDichVu
+(
+	SoPhieuDV VARCHAR(10) NOT NULL,
+	MaDV VARCHAR(10) NOT NULL,
+	PRIMARY KEY(SoPhieuDV,MaDV),
+	CONSTRAINT FK_CTPhieuDV_DV FOREIGN KEY(MaDV) REFERENCES DichVu(MaDV),
+	CONSTRAINT FK_CTPhieuDV_PDV FOREIGN KEY(SoPhieuDV) REFERENCES PhieuDichVu(SoPhieuDV)
 )
 GO
 
@@ -183,11 +226,73 @@ VALUES
 
 INSERT INTO PhongKham
 VALUES
+('PDV003',N'Phòng Dịch Vụ 1'),
+('PDV004',N'Phòng Dịch Vụ 2'),
 ('PK001',N'Phòng Khám 1'),
 ('PK002',N'Phòng Khám 2')
 
 SET DATEFORMAT DMY
 INSERT INTO TiepDonBenhNhan
 VALUES
-('PH01-01','17/06/2021', N'Khám miễn phí', N'Khám miệng-chảy máu chân răng', N'Không', N'Không', N'Trung bình',N'Chờ khám', 'BN001', 'PK001', 'NV001', 'NV005'),
-('PH01-01','16/06/2021', N'Khám miễn phí', N'Khám miệng-đau nhức răng hàm', N'Không', N'Không', N'Trung bình', N'Đã Khám', 'BN003', 'PK001', 'NV001', 'NV006')
+('PH01-001','16/06/2021', N'Khám miễn phí', N'Khám miệng-đau nhức răng hàm', N'Không', N'Không', N'Trung bình', N'Đã khám', 'BN003', 'PK001', 'NV001', 'NV006'),
+('PH01-002','17/06/2021', N'Khám miễn phí', N'Khám miệng-chảy máu chân răng', N'Không', N'Không', N'Trung bình',N'Chờ khám', 'BN001', 'PK001', 'NV001', 'NV005'),
+('PH01-003','01/07/2021', N'Khám miễn phí', N'Khám miệng-đau nhức răng hàm', N'Không', N'Không', N'Trung bình', N'Chờ khám', 'BN002', 'PK001', 'NV001', 'NV006')
+
+INSERT INTO LoaiDichVu
+VALUES
+('L001',N'Chụp X-Quang'),
+('L002',N'Bọc Răng Sứ'),
+('L003',N'Cấy Ghép Implant'),
+('L004',N'Niềng Răng Thẩm Mỹ'),
+('L005',N'Tẩy Trắng Răng'),
+('L006',N'Nhổ Răng Khôn'),
+('L007',N'Xử Lý Răng Sâu'),
+('L008',N'Điều Trị Nha Chu')
+
+INSERT INTO DichVu
+VALUES
+('DV001',N'Chụp xquang quanh chóp Digital Xray',40000,N'1 Răng','L001'),
+('DV002',N'Chụp x quang răng toàn cảnh Panorama',40000,N'1 Lần','L001'),
+('DV003',N'Chụp X-ray Occlusal',45000,N'1 Lần','L001'),
+('DV004',N'Răng Inox.',500000,N'1 Răng','L002'),
+('DV005',N'Răng sứ kim loại',1000000,N'1 Răng','L002'),
+('DV006',N'Răng sứ hợp kim Titan',2500000,N'1 Răng','L002'),
+('DV007',N'Răng sứ Crom Cobalt 3.5',3500000,N'1 Răng','L002'),
+('DV008',N'Răng sứ toàn sứ Zirconia',5000000,N'1 Răng','L002'),
+('DV009',N'Răng sứ Cercon',5500000,N'1 Răng','L002'),
+('DV010',N'Răng sứ Lava Plus',7000000,N'1 Răng','L002'),
+('DV011',N'Venneer sứ',6000000,N'1 Răng','L002'),
+('DV012',N'Nail Venneer sứ siêu mỏng',12000000,N'1 Răng','L002'),
+('DV013',N'Scan Digital',500000,N'1 Lần','L001'),
+('DV014',N'Implant Dio – Hàn Quốc',9500000,N'1 Trụ','L003'),
+('DV015',N'Implant California – Mỹ',11700000,N'1 Trụ','L003'),
+('DV016',N'Implant C1 – Đức',15200000,N'1 Trụ','L003'),
+('DV017',N'Implant Straumann – Thụy Sĩ',21000000,N'1 Trụ','L003'),
+('DV018',N'Niềng răng trong suốt Invisalign',90000,N'2 Hàm','L004'),
+('DV019',N'Mắc cài Sino Trung Quốc',18000000,N'2 Hàm','L004'),
+('DV020',N'Mắc cài thép buộc chun',27000000,N'2 Hàm','L004'),
+('DV021',N'Mắc cài tự khóa thông minh',32000000,N'2 Hàm','L004'),
+('DV022',N'Mắc cài Pitts',35000000,N'2 Hàm','L004'),
+('DV023',N'Mắc cài sứ thẩm mỹ',42000000,N'2 Hàm','L004'),
+('DV024',N'Mắc cài sứ thẩm mỹ thông minh',50000000,N'2 Hàm','L004'),
+('DV025',N'Tẩy trắng răng tại nhà 2 ống thuốc (Máng tẩy trắng răng)',700000,N'1 Lần','L005'),
+('DV026',N'Tẩy trắng răng tại phòng khám',1000000,N'1 Lần','L005'),
+('DV027',N'Tẩy trắng răng kết hợp tại nhà 2 ống thuốc & tại phòng khám',1500000,N'1 Lần','L005'),
+('DV028',N'Răng khôn mọc dễ',500000,N'1 Răng','L006'),
+('DV029',N'Răng khôn mọc khó loại 1',1000000,N'1 Răng','L006'),
+('DV030',N'Răng khôn mọc khó loại 2',2000000,N'1 Răng','L006'),
+('DV031',N'Răng khôn mọc khó loại 3',3500000,N'1 Răng','L006'),
+('DV032',N'Trám răng sữa',70000,N'1 Răng','L007'),
+('DV033',N'Trám răng mòn cổ',250000,N'1 Răng','L007'),
+('DV034',N'Trám răng sâu (không lấy tủy) composite',300000,N'1 Răng','L007'),
+('DV035',N'Trám răng sâu (không lấy tủy) GIC',150000,N'1 Răng','L007'),
+('DV036',N'Trám kẽ răng',300000,N'1 Răng','L007'),
+('DV037',N'Đắp mặt răng',400000,N'1 Răng','L007'),
+('DV038',N'Chữa tủy răng cửa',500000,N'1 Răng','L007'),
+('DV039',N'Chữa tủy răng tiền cối',700000,N'1 Răng','L007'),
+('DV040',N'Chữa tủy răng cối lớn',1000000,N'1 Răng','L007'),
+('DV041',N'Điều trị nha chu mức 1',1000000,N'1 Lần','L008'),
+('DV042',N'Điều trị nha chu mức 2',2500000,N'1 Lần','L008'),
+('DV043',N'Điều trị nha chu mức 3',5000000,N'1 Lần','L008'),
+('DV044',N'Điều trị nha chu mức 4',10000000,N'1 Lần','L008')
+

@@ -78,6 +78,9 @@
     <Compile Include="BLL_NhaKhoa\BLLNhanVien.cs" />
     <Compile Include="BLL_NhaKhoa\BLLNhomNguoiDung.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhanQuyen.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhieuDichVu.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhieuKham.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhongKham.cs" />
     <Compile Include="BLL_NhaKhoa\BLLTiepDonBenhNhan.cs" />
     <Compile Include="BLL_NhaKhoa\QuanLyNhaKhoa.designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,6 +92,18 @@
     </Compile>
     <Compile Include="frmPhanQuyen.Designer.cs">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuDichVu.Designer.cs">
+      <DependentUpon>frmPhieuDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuKhamBenh.Designer.cs">
+      <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPhongKham.cs">
       <SubType>Form</SubType>
@@ -176,6 +191,12 @@
     <Compile Include="RPSoPhieu.Designer.cs">
       <DependentUpon>RPSoPhieu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmPhieuDichVu.resx">
+      <DependentUpon>frmPhieuDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuKhamBenh.resx">
+      <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPPhieuDangKyKham.resx">
       <DependentUpon>RPPhieuDangKyKham.cs</DependentUpon>
     </EmbeddedResource>

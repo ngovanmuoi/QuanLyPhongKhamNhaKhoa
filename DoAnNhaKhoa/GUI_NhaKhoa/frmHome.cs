@@ -196,5 +196,18 @@ namespace GUI_NhaKhoa
             phongKham.MdiParent = this;
             phongKham.Show();
         }
+
+        private void btnLapPhieuKham_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DongTatCaCacTab();
+            frmPhieuKhamBenh phieuKhamBenh = new frmPhieuKhamBenh();
+            phieuKhamBenh.MdiParent = this;
+            phieuKhamBenh.Show();
+        }
+
+        private void frmHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
