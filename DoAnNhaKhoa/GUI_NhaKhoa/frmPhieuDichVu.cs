@@ -133,5 +133,10 @@ namespace GUI_NhaKhoa
             lblTongTien.Text = phieuDichVu.ChuyenSo_chu(gt);
             phieuDichVu.DanhSachDV(dtgvDV, sophieu);
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

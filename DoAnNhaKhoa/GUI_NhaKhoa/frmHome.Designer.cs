@@ -59,6 +59,8 @@ namespace GUI_NhaKhoa
             this.btnThuTienDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXepLich = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPhongDichVu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbLeTan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbBacSi = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,6 +79,7 @@ namespace GUI_NhaKhoa
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -113,9 +116,12 @@ namespace GUI_NhaKhoa
             this.btnLapPhieuKham,
             this.btnThuTienDV,
             this.btnQLThuoc,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.btnXepLich,
+            this.btnPhongDichVu,
+            this.barButtonItem4});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 33;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbHeThong,
@@ -338,6 +344,7 @@ namespace GUI_NhaKhoa
             this.btnThuTienDV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThuTienDV.ImageOptions.Image")));
             this.btnThuTienDV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThuTienDV.ImageOptions.LargeImage")));
             this.btnThuTienDV.Name = "btnThuTienDV";
+            this.btnThuTienDV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThuTienDV_ItemClick);
             // 
             // btnQLThuoc
             // 
@@ -352,6 +359,24 @@ namespace GUI_NhaKhoa
             this.barButtonItem3.Caption = "                        ";
             this.barButtonItem3.Id = 29;
             this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // btnXepLich
+            // 
+            this.btnXepLich.Caption = "Xếp lịch nhân viên";
+            this.btnXepLich.Id = 30;
+            this.btnXepLich.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXepLich.ImageOptions.Image")));
+            this.btnXepLich.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXepLich.ImageOptions.LargeImage")));
+            this.btnXepLich.Name = "btnXepLich";
+            this.btnXepLich.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXepLich_ItemClick);
+            // 
+            // btnPhongDichVu
+            // 
+            this.btnPhongDichVu.Caption = "Phòng Dịch Vụ";
+            this.btnPhongDichVu.Id = 31;
+            this.btnPhongDichVu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongDichVu.ImageOptions.Image")));
+            this.btnPhongDichVu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhongDichVu.ImageOptions.LargeImage")));
+            this.btnPhongDichVu.Name = "btnPhongDichVu";
+            this.btnPhongDichVu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhongDichVu_ItemClick);
             // 
             // ribbHeThong
             // 
@@ -376,6 +401,7 @@ namespace GUI_NhaKhoa
             // 
             this.ribbBacSi.ItemLinks.Add(this.btnPhongKham);
             this.ribbBacSi.ItemLinks.Add(this.btnLapPhieuKham);
+            this.ribbBacSi.ItemLinks.Add(this.btnPhongDichVu);
             this.ribbBacSi.Name = "ribbBacSi";
             this.ribbBacSi.Tag = "ribbBacSi";
             this.ribbBacSi.Text = "Nghiệp vụ bác sĩ";
@@ -405,6 +431,7 @@ namespace GUI_NhaKhoa
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLBenhLy);
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLBenhNhan);
             this.ribbQLPhongKham.ItemLinks.Add(this.btnQLThuoc);
+            this.ribbQLPhongKham.ItemLinks.Add(this.btnXepLich);
             this.ribbQLPhongKham.Name = "ribbQLPhongKham";
             this.ribbQLPhongKham.Text = "Quản lý phòng khám";
             // 
@@ -473,6 +500,7 @@ namespace GUI_NhaKhoa
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnTinhLuong);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
             // ribbonStatusBar
@@ -486,6 +514,14 @@ namespace GUI_NhaKhoa
             // 
             this.xtraTabbedMdiManager1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Chấm công";
+            this.barButtonItem4.Id = 32;
+            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.barButtonItem4.Name = "barButtonItem4";
             // 
             // frmHome
             // 
@@ -558,5 +594,8 @@ namespace GUI_NhaKhoa
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbThuNgan;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnXepLich;
+        private DevExpress.XtraBars.BarButtonItem btnPhongDichVu;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }

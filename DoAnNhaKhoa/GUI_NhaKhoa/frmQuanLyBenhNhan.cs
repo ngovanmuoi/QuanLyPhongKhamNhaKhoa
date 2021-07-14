@@ -172,17 +172,17 @@ namespace GUI_NhaKhoa
                 {
                     try
                     {
-                        if (benhNhan.KTTrungMaThe(txtMaThe.Text.ToString()))
-                        {
-                            MessageBox.Show("Mã thẻ trùng với bệnh nhân khác", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
+                        //if (benhNhan.KTTrungMaThe(txtMaThe.Text.Trim().ToString()))
+                        //{
+                        //    MessageBox.Show("Mã thẻ trùng với bệnh nhân khác", "Lỗi", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                        //}
+                        //else
+                        //{
                             benhNhan.ThemBN(txtMaBN.Text, txtMaThe.Text, txtHoTen.Text, cbbGioiTinh.Text, cbbNgaySinh.Text, txtDiaChi.Text, txtSDT.Text, txtEmail.Text);
                             MessageBox.Show("Thêm bệnh nhân thành công");
                             LoadData();
                             benhNhan.LayBenhNhan(dtgvDS);
-                        }
+                        //}
                     }
                     catch
                     {

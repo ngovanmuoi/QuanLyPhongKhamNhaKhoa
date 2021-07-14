@@ -207,7 +207,29 @@ namespace GUI_NhaKhoa
 
         private void frmHome_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+        }
+
+        private void btnXepLich_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DongTatCaCacTab();
+            XepLichNhanVien xepLich = new XepLichNhanVien();
+            xepLich.MdiParent = this;
+            xepLich.Show();
+        }
+
+        private void btnThuTienDV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThanhToan thanhToan = new frmThanhToan();
+            thanhToan.MdiParent = this;
+            thanhToan.Show();
+        }
+
+        private void btnPhongDichVu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPhongDichVu phongDichVu = new frmPhongDichVu();
+            phongDichVu.MdiParent = this;
+            phongDichVu.Show();
         }
     }
 }

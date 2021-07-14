@@ -70,7 +70,7 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             }
             return ten;
         }
-        public void LayTTBenhNhan(string pMaBN, TextBox txtMaThe, TextBox txtHoten, ComboBox cbbGioiTinh, TextBox txtNgaySinh, TextBox txtDiaChi, TextBox txtSDT)
+        public void LayTTBenhNhan(string pMaBN, TextBox txtMaThe, TextBox txtHoten, ComboBox cbbGioiTinh, TextBox txtNgaySinh, TextBox txtDiaChi, NumericTextBox txtSDT)
         {
             var Tennv = (from p in nhakhoa.BenhNhans
                          where p.MaBenhNhan.Trim() == pMaBN

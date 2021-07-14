@@ -119,7 +119,7 @@ namespace GUI_NhaKhoa
             this.groupControl1.Controls.Add(this.txtLoaiKham);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1283, 177);
             this.groupControl1.TabIndex = 0;
@@ -128,7 +128,7 @@ namespace GUI_NhaKhoa
             // cbbMaBN
             // 
             this.cbbMaBN.Location = new System.Drawing.Point(108, 80);
-            this.cbbMaBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMaBN.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMaBN.Name = "cbbMaBN";
             this.cbbMaBN.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaBN.Properties.Appearance.Options.UseFont = true;
@@ -154,7 +154,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(616, 126);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(661, 30);
@@ -164,7 +164,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgaySinh.Location = new System.Drawing.Point(1044, 39);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.ReadOnly = true;
             this.txtNgaySinh.Size = new System.Drawing.Size(233, 30);
@@ -196,7 +196,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiTinh.Location = new System.Drawing.Point(1496, 59);
-            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.ReadOnly = true;
             this.txtGioiTinh.Size = new System.Drawing.Size(116, 30);
@@ -206,7 +206,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(1044, 81);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(233, 30);
@@ -249,7 +249,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDT.Location = new System.Drawing.Point(616, 81);
-            this.txtDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtDT.Name = "txtDT";
             this.txtDT.ReadOnly = true;
             this.txtDT.Size = new System.Drawing.Size(310, 30);
@@ -259,7 +259,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtMaThe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaThe.Location = new System.Drawing.Point(616, 39);
-            this.txtMaThe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaThe.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaThe.Name = "txtMaThe";
             this.txtMaThe.ReadOnly = true;
             this.txtMaThe.Size = new System.Drawing.Size(310, 30);
@@ -280,7 +280,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(108, 126);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(393, 30);
@@ -312,7 +312,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtLoaiKham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoaiKham.Location = new System.Drawing.Point(108, 39);
-            this.txtLoaiKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLoaiKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtLoaiKham.Name = "txtLoaiKham";
             this.txtLoaiKham.Size = new System.Drawing.Size(393, 30);
             this.txtLoaiKham.TabIndex = 1;
@@ -342,8 +342,8 @@ namespace GUI_NhaKhoa
             this.groupControl2.Controls.Add(this.label15);
             this.groupControl2.Controls.Add(this.txtSoPhieu);
             this.groupControl2.Controls.Add(this.label18);
-            this.groupControl2.Location = new System.Drawing.Point(0, 178);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Location = new System.Drawing.Point(0, 179);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1283, 147);
             this.groupControl2.TabIndex = 1;
@@ -353,7 +353,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtLyDo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLyDo.Location = new System.Drawing.Point(946, 89);
-            this.txtLyDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLyDo.Margin = new System.Windows.Forms.Padding(4);
             this.txtLyDo.Name = "txtLyDo";
             this.txtLyDo.ReadOnly = true;
             this.txtLyDo.Size = new System.Drawing.Size(331, 30);
@@ -374,7 +374,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtBacSi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBacSi.Location = new System.Drawing.Point(510, 89);
-            this.txtBacSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBacSi.Margin = new System.Windows.Forms.Padding(4);
             this.txtBacSi.Name = "txtBacSi";
             this.txtBacSi.Size = new System.Drawing.Size(310, 30);
             this.txtBacSi.TabIndex = 15;
@@ -394,7 +394,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtTiepDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiepDon.Location = new System.Drawing.Point(108, 90);
-            this.txtTiepDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTiepDon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTiepDon.Name = "txtTiepDon";
             this.txtTiepDon.ReadOnly = true;
             this.txtTiepDon.Size = new System.Drawing.Size(269, 30);
@@ -415,7 +415,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtPhongKham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhongKham.Location = new System.Drawing.Point(946, 33);
-            this.txtPhongKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhongKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhongKham.Name = "txtPhongKham";
             this.txtPhongKham.ReadOnly = true;
             this.txtPhongKham.Size = new System.Drawing.Size(331, 30);
@@ -436,7 +436,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtNgayKham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgayKham.Location = new System.Drawing.Point(510, 38);
-            this.txtNgayKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNgayKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgayKham.Name = "txtNgayKham";
             this.txtNgayKham.ReadOnly = true;
             this.txtNgayKham.Size = new System.Drawing.Size(310, 30);
@@ -457,7 +457,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtSoPhieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoPhieu.Location = new System.Drawing.Point(108, 39);
-            this.txtSoPhieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoPhieu.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoPhieu.Name = "txtSoPhieu";
             this.txtSoPhieu.ReadOnly = true;
             this.txtSoPhieu.Size = new System.Drawing.Size(269, 30);
@@ -487,7 +487,7 @@ namespace GUI_NhaKhoa
             this.groupControl3.Controls.Add(this.label14);
             this.groupControl3.Controls.Add(this.cbbTieuDuong);
             this.groupControl3.Location = new System.Drawing.Point(0, 329);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(1632, 195);
             this.groupControl3.TabIndex = 2;
@@ -497,7 +497,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtKetLuan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKetLuan.Location = new System.Drawing.Point(952, 39);
-            this.txtKetLuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKetLuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtKetLuan.Name = "txtKetLuan";
             this.txtKetLuan.Size = new System.Drawing.Size(325, 119);
             this.txtKetLuan.TabIndex = 23;
@@ -518,7 +518,7 @@ namespace GUI_NhaKhoa
             // 
             this.txtChuanDoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChuanDoan.Location = new System.Drawing.Point(495, 39);
-            this.txtChuanDoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChuanDoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtChuanDoan.Name = "txtChuanDoan";
             this.txtChuanDoan.Size = new System.Drawing.Size(325, 119);
             this.txtChuanDoan.TabIndex = 21;
@@ -543,7 +543,7 @@ namespace GUI_NhaKhoa
             "Không",
             "Có"});
             this.cbbTimMach.Location = new System.Drawing.Point(159, 136);
-            this.cbbTimMach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbTimMach.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTimMach.Name = "cbbTimMach";
             this.cbbTimMach.Size = new System.Drawing.Size(186, 30);
             this.cbbTimMach.TabIndex = 19;
@@ -555,9 +555,9 @@ namespace GUI_NhaKhoa
             this.label19.Location = new System.Drawing.Point(375, 72);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(102, 44);
+            this.label19.Size = new System.Drawing.Size(93, 44);
             this.label19.TabIndex = 18;
-            this.label19.Text = "Chuẩn đoán\r\nbệnh";
+            this.label19.Text = "Chẩn đoán\r\nbệnh";
             // 
             // label16
             // 
@@ -579,7 +579,7 @@ namespace GUI_NhaKhoa
             "Thấp",
             "Cao"});
             this.cbbHuyetAp.Location = new System.Drawing.Point(160, 85);
-            this.cbbHuyetAp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbHuyetAp.Margin = new System.Windows.Forms.Padding(4);
             this.cbbHuyetAp.Name = "cbbHuyetAp";
             this.cbbHuyetAp.Size = new System.Drawing.Size(185, 30);
             this.cbbHuyetAp.TabIndex = 14;
@@ -603,7 +603,7 @@ namespace GUI_NhaKhoa
             "Không",
             "Có"});
             this.cbbTieuDuong.Location = new System.Drawing.Point(160, 39);
-            this.cbbTieuDuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbTieuDuong.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTieuDuong.Name = "cbbTieuDuong";
             this.cbbTieuDuong.Size = new System.Drawing.Size(185, 30);
             this.cbbTieuDuong.TabIndex = 0;
@@ -617,7 +617,7 @@ namespace GUI_NhaKhoa
             this.groupControl5.Controls.Add(this.btnKeDV);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl5.Location = new System.Drawing.Point(1283, 0);
-            this.groupControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(230, 642);
             this.groupControl5.TabIndex = 4;
@@ -631,7 +631,7 @@ namespace GUI_NhaKhoa
             this.btnHuyKham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnHuyKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyKham.ImageOptions.Image")));
             this.btnHuyKham.Location = new System.Drawing.Point(14, 521);
-            this.btnHuyKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHuyKham.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuyKham.Name = "btnHuyKham";
             this.btnHuyKham.Size = new System.Drawing.Size(208, 101);
             this.btnHuyKham.TabIndex = 5;
@@ -647,7 +647,7 @@ namespace GUI_NhaKhoa
             this.btnKetThucKham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnKetThucKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKetThucKham.ImageOptions.Image")));
             this.btnKetThucKham.Location = new System.Drawing.Point(14, 397);
-            this.btnKetThucKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKetThucKham.Margin = new System.Windows.Forms.Padding(4);
             this.btnKetThucKham.Name = "btnKetThucKham";
             this.btnKetThucKham.Size = new System.Drawing.Size(208, 101);
             this.btnKetThucKham.TabIndex = 4;
@@ -663,7 +663,7 @@ namespace GUI_NhaKhoa
             this.btnLichSuKham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLichSuKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLichSuKham.ImageOptions.Image")));
             this.btnLichSuKham.Location = new System.Drawing.Point(14, 270);
-            this.btnLichSuKham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLichSuKham.Margin = new System.Windows.Forms.Padding(4);
             this.btnLichSuKham.Name = "btnLichSuKham";
             this.btnLichSuKham.Size = new System.Drawing.Size(208, 101);
             this.btnLichSuKham.TabIndex = 3;
@@ -678,7 +678,7 @@ namespace GUI_NhaKhoa
             this.btnKeDonThuoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnKeDonThuoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKeDonThuoc.ImageOptions.Image")));
             this.btnKeDonThuoc.Location = new System.Drawing.Point(14, 154);
-            this.btnKeDonThuoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKeDonThuoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnKeDonThuoc.Name = "btnKeDonThuoc";
             this.btnKeDonThuoc.Size = new System.Drawing.Size(208, 101);
             this.btnKeDonThuoc.TabIndex = 2;
@@ -693,7 +693,7 @@ namespace GUI_NhaKhoa
             this.btnKeDV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnKeDV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKeDV.ImageOptions.Image")));
             this.btnKeDV.Location = new System.Drawing.Point(14, 32);
-            this.btnKeDV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKeDV.Margin = new System.Windows.Forms.Padding(4);
             this.btnKeDV.Name = "btnKeDV";
             this.btnKeDV.Size = new System.Drawing.Size(208, 101);
             this.btnKeDV.TabIndex = 1;
@@ -706,7 +706,7 @@ namespace GUI_NhaKhoa
             this.groupControl4.Controls.Add(this.btnSua);
             this.groupControl4.Controls.Add(this.btnLuu);
             this.groupControl4.Location = new System.Drawing.Point(0, 521);
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(1283, 121);
             this.groupControl4.TabIndex = 3;
@@ -721,7 +721,7 @@ namespace GUI_NhaKhoa
             this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
             this.btnIn.Location = new System.Drawing.Point(973, 37);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(273, 71);
             this.btnIn.TabIndex = 4;
@@ -737,7 +737,7 @@ namespace GUI_NhaKhoa
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.Location = new System.Drawing.Point(466, 37);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(340, 71);
             this.btnSua.TabIndex = 3;
@@ -753,7 +753,7 @@ namespace GUI_NhaKhoa
             this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(14, 37);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(331, 71);
             this.btnLuu.TabIndex = 2;

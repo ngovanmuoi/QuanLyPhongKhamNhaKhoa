@@ -32,6 +32,7 @@ namespace GUI_NhaKhoa
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTiepDonBenhNhan));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnLaySoPhieu = new DevExpress.XtraEditors.SimpleButton();
             this.btnIn = new DevExpress.XtraEditors.SimpleButton();
@@ -49,7 +50,6 @@ namespace GUI_NhaKhoa
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtNgaySinh = new System.Windows.Forms.TextBox();
@@ -103,6 +103,7 @@ namespace GUI_NhaKhoa
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgvDS = new System.Windows.Forms.DataGridView();
+            this.txtSDT = new GUI_NhaKhoa.NumericTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -155,6 +156,7 @@ namespace GUI_NhaKhoa
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox5.Controls.Add(this.btnXuatExcel);
             this.groupBox5.Controls.Add(this.btnThoat);
             this.groupBox5.Controls.Add(this.btnLaySoPhieu);
             this.groupBox5.Controls.Add(this.btnIn);
@@ -172,6 +174,21 @@ namespace GUI_NhaKhoa
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Xử lý";
             // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.BackColor = System.Drawing.Color.White;
+            this.btnXuatExcel.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.Image = global::GUI_NhaKhoa.Properties.Resources.excel;
+            this.btnXuatExcel.Location = new System.Drawing.Point(1188, 18);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(149, 51);
+            this.btnXuatExcel.TabIndex = 9;
+            this.btnXuatExcel.Text = "Xuất";
+            this.btnXuatExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXuatExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXuatExcel.UseVisualStyleBackColor = false;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
+            // 
             // btnThoat
             // 
             this.btnThoat.Appearance.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,7 +197,7 @@ namespace GUI_NhaKhoa
             this.btnThoat.Appearance.Options.UseForeColor = true;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1299, 21);
+            this.btnThoat.Location = new System.Drawing.Point(1347, 19);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(145, 50);
             this.btnThoat.TabIndex = 6;
@@ -194,7 +211,7 @@ namespace GUI_NhaKhoa
             this.btnLaySoPhieu.Appearance.Options.UseForeColor = true;
             this.btnLaySoPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLaySoPhieu.ImageOptions.Image = global::GUI_NhaKhoa.Properties.Resources.icon_stt;
-            this.btnLaySoPhieu.Location = new System.Drawing.Point(1067, 21);
+            this.btnLaySoPhieu.Location = new System.Drawing.Point(980, 19);
             this.btnLaySoPhieu.Name = "btnLaySoPhieu";
             this.btnLaySoPhieu.Size = new System.Drawing.Size(181, 50);
             this.btnLaySoPhieu.TabIndex = 5;
@@ -209,7 +226,7 @@ namespace GUI_NhaKhoa
             this.btnIn.Appearance.Options.UseForeColor = true;
             this.btnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
-            this.btnIn.Location = new System.Drawing.Point(853, 21);
+            this.btnIn.Location = new System.Drawing.Point(794, 19);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(145, 50);
             this.btnIn.TabIndex = 4;
@@ -224,7 +241,7 @@ namespace GUI_NhaKhoa
             this.btnLuu.Appearance.Options.UseForeColor = true;
             this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(652, 21);
+            this.btnLuu.Location = new System.Drawing.Point(614, 19);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(145, 50);
             this.btnLuu.TabIndex = 3;
@@ -239,7 +256,7 @@ namespace GUI_NhaKhoa
             this.btnSua.Appearance.Options.UseForeColor = true;
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(451, 21);
+            this.btnSua.Location = new System.Drawing.Point(420, 18);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(145, 50);
             this.btnSua.TabIndex = 2;
@@ -254,7 +271,7 @@ namespace GUI_NhaKhoa
             this.btnXoa.Appearance.Options.UseForeColor = true;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(269, 21);
+            this.btnXoa.Location = new System.Drawing.Point(226, 21);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(145, 50);
             this.btnXoa.TabIndex = 1;
@@ -269,7 +286,7 @@ namespace GUI_NhaKhoa
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(77, 21);
+            this.btnThem.Location = new System.Drawing.Point(49, 21);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(145, 50);
             this.btnThem.TabIndex = 0;
@@ -377,13 +394,6 @@ namespace GUI_NhaKhoa
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(308, 39);
             this.panel6.TabIndex = 6;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(66, 2);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(239, 30);
-            this.txtSDT.TabIndex = 2;
             // 
             // label7
             // 
@@ -930,6 +940,14 @@ namespace GUI_NhaKhoa
             this.dtgvDS.TabIndex = 0;
             this.dtgvDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDS_CellContentClick);
             // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(59, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(243, 30);
+            this.txtSDT.TabIndex = 1;
+            // 
             // frmTiepDonBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1006,7 +1024,6 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtNgaySinh;
@@ -1060,5 +1077,7 @@ namespace GUI_NhaKhoa
         private System.Windows.Forms.ComboBox cbbTimMach;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cbbTieuDuong;
+        private System.Windows.Forms.Button btnXuatExcel;
+        private NumericTextBox txtSDT;
     }
 }

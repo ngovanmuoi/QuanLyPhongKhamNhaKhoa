@@ -78,6 +78,7 @@
       <Column Name="MaPhong" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="PhongKham_TiepDonBenhNhan" Member="TiepDonBenhNhans" ThisKey="MaPhong" OtherKey="MaPhong" Type="TiepDonBenhNhan" />
+      <Association Name="PhongKham_PhieuDichVu" Member="PhieuDichVus" ThisKey="MaPhong" OtherKey="MaPhong" Type="PhieuDichVu" />
     </Type>
   </Table>
   <Table Name="dbo.TiepDonBenhNhan" Member="TiepDonBenhNhans">
@@ -106,6 +107,7 @@
       <Column Name="SoPhieu" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ChuanDoan" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
       <Column Name="KetLuan" Type="System.String" DbType="NVarChar(225) NOT NULL" CanBeNull="false" />
+      <Association Name="PhieuKhamBenh_PhieuDichVu" Member="PhieuDichVus" ThisKey="SoPhieu" OtherKey="SoPhieu" Type="PhieuDichVu" />
       <Association Name="TiepDonBenhNhan_PhieuKhamBenh" Member="TiepDonBenhNhan" ThisKey="SoPhieu" OtherKey="SoPhieu" Type="TiepDonBenhNhan" IsForeignKey="true" />
     </Type>
   </Table>
@@ -127,6 +129,14 @@
       <Association Name="LoaiDichVu_DichVu" Member="DichVus" ThisKey="MaLoai" OtherKey="MaLoai" Type="DichVu" />
     </Type>
   </Table>
+  <Table Name="dbo.CTPhieuDichVu" Member="CTPhieuDichVus">
+    <Type Name="CTPhieuDichVu">
+      <Column Name="SoPhieuDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DichVu_CTPhieuDichVu" Member="DichVu" ThisKey="MaDV" OtherKey="MaDV" Type="DichVu" IsForeignKey="true" />
+      <Association Name="PhieuDichVu_CTPhieuDichVu" Member="PhieuDichVu" ThisKey="SoPhieuDV" OtherKey="SoPhieuDV" Type="PhieuDichVu" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.PhieuDichVu" Member="PhieuDichVus">
     <Type Name="PhieuDichVu">
       <Column Name="SoPhieuDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -135,16 +145,23 @@
       <Column Name="NgayLap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhToan" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SoPhieu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="PhieuDichVu_CTPhieuDichVu" Member="CTPhieuDichVus" ThisKey="SoPhieuDV" OtherKey="SoPhieuDV" Type="CTPhieuDichVu" />
+      <Association Name="PhieuDichVu_PhieuKetQua" Member="PhieuKetQuas" ThisKey="SoPhieuDV" OtherKey="SoPhieuDV" Type="PhieuKetQua" />
       <Association Name="BenhNhan_PhieuDichVu" Member="BenhNhan" ThisKey="MaBenhNhan" OtherKey="MaBenhNhan" Type="BenhNhan" IsForeignKey="true" />
+      <Association Name="PhieuKhamBenh_PhieuDichVu" Member="PhieuKhamBenh" ThisKey="SoPhieu" OtherKey="SoPhieu" Type="PhieuKhamBenh" IsForeignKey="true" />
+      <Association Name="PhongKham_PhieuDichVu" Member="PhongKham" ThisKey="MaPhong" OtherKey="MaPhong" Type="PhongKham" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.CTPhieuDichVu" Member="CTPhieuDichVus">
-    <Type Name="CTPhieuDichVu">
-      <Column Name="SoPhieuDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="DichVu_CTPhieuDichVu" Member="DichVu" ThisKey="MaDV" OtherKey="MaDV" Type="DichVu" IsForeignKey="true" />
-      <Association Name="PhieuDichVu_CTPhieuDichVu" Member="PhieuDichVu" ThisKey="SoPhieuDV" OtherKey="SoPhieuDV" Type="PhieuDichVu" IsForeignKey="true" />
+  <Table Name="dbo.PhieuKetQua" Member="PhieuKetQuas">
+    <Type Name="PhieuKetQua">
+      <Column Name="SoPhieuKQ" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoPhieuDV" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="KetLuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PhieuDichVu_PhieuKetQua" Member="PhieuDichVu" ThisKey="SoPhieuDV" OtherKey="SoPhieuDV" Type="PhieuDichVu" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

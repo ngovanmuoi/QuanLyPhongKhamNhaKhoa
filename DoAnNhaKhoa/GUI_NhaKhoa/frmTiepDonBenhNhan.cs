@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using GUI_NhaKhoa.BLL_NhaKhoa;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
+
 namespace GUI_NhaKhoa
 {
     public partial class frmTiepDonBenhNhan : Form
@@ -155,7 +158,7 @@ namespace GUI_NhaKhoa
         {
             //try
             //{
-            DataTable dt = tiepDonBenhNhan.LayDSTiepDonTheoPhong(pPhong);
+            System.Data.DataTable dt = tiepDonBenhNhan.LayDSTiepDonTheoPhong(pPhong);
             int count = dt.Rows.Count;
             string phieu = "";
             string soPhieuMoi = "";
@@ -339,7 +342,7 @@ namespace GUI_NhaKhoa
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             dt = tiepDonBenhNhan.RPPhieuDangKyKham(txtSoPhieu.Text, cbbNgayKham.Text);
             RPPhieuDangKyKham rp = new RPPhieuDangKyKham();
             rp.DataSource = dt;
@@ -349,11 +352,53 @@ namespace GUI_NhaKhoa
 
         private void btnLaySoPhieu_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             dt = tiepDonBenhNhan.RPSoPhieu(txtSoPhieu.Text, cbbNgayKham.Text);
             RPSoPhieu rp = new RPSoPhieu();
             rp.DataSource = dt;
             rp.ShowPreview();
+        }
+        private bool exportExcel(DataGridView dtgv, string plink, string pFileName)
+        {
+            try
+            {
+                app obj = new app();
+                obj.Application.Workbooks.Add(Type.Missing);
+                obj.Columns.ColumnWidth = 25;
+                for (int i = 1; i < dtgv.Columns.Count + 1; i++)
+                {
+                    obj.Cells[1, i] = dtgv.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < dtgv.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dtgv.Columns.Count; j++)
+                    {
+                        if (dtgv.Rows[i].Cells[j].Value != null)
+                        {
+                            obj.Cells[i + 2, j + 1] = dtgv.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                }
+                obj.ActiveWorkbook.SaveCopyAs(plink + pFileName + ".xlsx");
+                obj.ActiveWorkbook.Saved = true;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            bool xuat = exportExcel(dtgvDS, @"E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\", "DanhSachTiepDon");
+            if (xuat)
+            {
+                MessageBox.Show("Xuất file thàng công", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Xuất file thất bại", "Thông báo");
+            }
         }
     }
 }

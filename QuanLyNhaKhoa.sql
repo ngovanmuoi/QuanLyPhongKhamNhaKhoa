@@ -122,11 +122,15 @@ CREATE TABLE PhieuDichVu
 	SoPhieuDV VARCHAR(10) NOT NULL,
 	MaBenhNhan VARCHAR (10) NOT NULL,
 	MaPhong VARCHAR(10) NOT NULL,
+	SoPhieu VARCHAR(10) NOT NULL,
 	NgayLap DATE NOT NULL,
 	TinhTrang NVARCHAR(20),
 	TongTien INT,
+	ThanhToan NVARCHAR(20),
 	PRIMARY KEY(SoPhieuDV),
-	CONSTRAINT FK_PhieuDV_BenhNhan FOREIGN KEY(MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan)
+	CONSTRAINT FK_PhieuDV_BenhNhan FOREIGN KEY(MaBenhNhan) REFERENCES BenhNhan(MaBenhNhan),
+	CONSTRAINT FK_PhieuDV_Phong FOREIGN KEY(MaPhong) REFERENCES PhongKham(MaPhong),
+	CONSTRAINT FK_PhieuDV_PhieuKham FOREIGN KEY(SoPhieu) REFERENCES PhieuKhamBenh(SoPhieu)
 )
 CREATE TABLE CTPhieuDichVu
 (
@@ -135,6 +139,17 @@ CREATE TABLE CTPhieuDichVu
 	PRIMARY KEY(SoPhieuDV,MaDV),
 	CONSTRAINT FK_CTPhieuDV_DV FOREIGN KEY(MaDV) REFERENCES DichVu(MaDV),
 	CONSTRAINT FK_CTPhieuDV_PDV FOREIGN KEY(SoPhieuDV) REFERENCES PhieuDichVu(SoPhieuDV)
+)
+CREATE TABLE PhieuKetQua
+(
+	
+	SoPhieuKQ VARCHAR(10) NOT NULL,
+	TenDV NVARCHAR(100),
+	SoPhieuDV VARCHAR(10) NOT NULL,
+	HinhAnh TEXT,
+	KetLuan NVARCHAR(50),
+	PRIMARY KEY(SoPhieuKQ),
+	CONSTRAINT FK_PhieuKQ_PDV FOREIGN KEY(SoPhieuDV) REFERENCES PhieuDichVu(SoPhieuDV)
 )
 GO
 
@@ -147,7 +162,13 @@ VALUES
 ('NV003', N'Chung Tử Đơn', N'Nam', '21/03/1990', N'11 Bàu Bàng, Phường 13, Tân Bình, Tp.HCM', '0935224412', '12/05/2015', 200000),
 ('NV004', N'Châu Nhuận Phát ', N'Nam', '15/12/1991', N'64 Đường số 17, Linh Trung, Thủ Đức', '0392419643', '30/05/2010', 200000),
 ('NV005', N'Lý Gia Hân', N'Nữ', '01/10/1995', N'4 đường D11, P.Tây Thạnh ,Q.Tân Phú, Tp.Hcm', '0924032217', '21/12/2018', 150000),
-('NV006', N'Huỳnh Thúy Như', N'Nữ', '16/02/1993', N'37 Trần Quý Cáp, Phường 11, Q.Bình Thạnh, Tp.Hcm', '0935124588', '04/11/2019', 120000)
+('NV006', N'Huỳnh Thúy Như', N'Nữ', '16/02/1993', N'37 Trần Quý Cáp, Phường 11, Q.Bình Thạnh, Tp.Hcm', '0935124588', '04/11/2019', 120000),
+('NV007', N'Trần Mỹ Loan', N'Nữ', '29/07/1996', N'30 Kha Vạn Cân, Hiệp Bình Chánh, Thủ Đức', '0322548963', '04/11/2019', 120000),
+('NV008', N'Bùi Hoàng Khánh Ngọc', N'Nữ', '30/05/1999', N' 60 Giang Văn Minh, An Phú, Q.2, Tp.Hcm', '0935010234', '04/11/2019', 120000),
+('NV009', N'Trương Trung Hiếu', N'Nam', '28/02/1990', N'224 Hoàng Hoa Thám, Phường 13, Q.Tân Bình, Tp.Hcm', '0396542214', '04/11/2019', 120000),
+('NV010', N'Bùi Hồng Ngọc', N'Nữ', '14/01/1997', N'130 Hoàng Văn Thụ, Phường 9, Q.Phú Nhuận, Tp.Hcm', '0987362214', '04/11/2019', 120000),
+('NV011', N'Võ Trường Giang', N'Nam', '23/03/1996', N'25 Cao Thắng, Phường 11, Q.3, Tp.Hcm', '0365210025', '04/11/2019', 120000),
+('NV012', N'Trương Thế Vinh', N'Nam', '20/11/1995', N'135 Điện Biên Phủ, P.Đa Kao, Q.1, Tp.Hcm', '0123547824', '04/11/2019', 120000)
 
 INSERT INTO NhomNguoiDung
 VALUES

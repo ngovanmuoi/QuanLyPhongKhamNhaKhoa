@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 using GUI_NhaKhoa.BLL_NhaKhoa;
 
 namespace GUI_NhaKhoa
@@ -264,6 +266,49 @@ namespace GUI_NhaKhoa
             this.txtTimKiem.ResetText();
             this.cbbLocGT.Text = "Tất Cả";
             this.cbbDiaChi.Text = "Tất Cả";
+        }
+        private bool exportExcel(DataGridView dtgv, string plink, string pFileName)
+        {
+            try
+            {
+                app obj = new app();
+                obj.Application.Workbooks.Add(Type.Missing);
+                obj.Columns.ColumnWidth = 25;
+                for (int i = 1; i < dtgv.Columns.Count + 1; i++)
+                {
+                    obj.Cells[1, i] = dtgv.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < dtgv.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dtgv.Columns.Count; j++)
+                    {
+                        if (dtgv.Rows[i].Cells[j].Value != null)
+                        {
+                            obj.Cells[i + 2, j + 1] = dtgv.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+                }
+                obj.ActiveWorkbook.SaveCopyAs(plink + pFileName + ".xlsx");
+                obj.ActiveWorkbook.Saved = true;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            bool xuat = exportExcel(dtgvDS, @"E:\Phat Trien Phan Mem\QuanLyPhongKhamNhaKhoa\", "DanhSachNhanVien");
+            if (xuat)
+            {
+                MessageBox.Show("Xuất file thàng công", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Xuất file thất bại", "Thông báo");
+            }    
         }
     }
 }

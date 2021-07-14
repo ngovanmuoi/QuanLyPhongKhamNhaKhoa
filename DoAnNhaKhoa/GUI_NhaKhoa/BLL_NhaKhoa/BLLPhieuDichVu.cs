@@ -220,6 +220,7 @@ namespace GUI_NhaKhoa.BLL_NhaKhoa
             phieuDichVu.NgayLap = DateTime.Parse(pNgayLap);
             phieuDichVu.TinhTrang = "Chờ thực hiện";
             phieuDichVu.TongTien = 0;
+            phieuDichVu.ThanhToan = "Chưa Thanh Toán";
             nhakhoa.PhieuDichVus.InsertOnSubmit(phieuDichVu);
             nhakhoa.SubmitChanges();
         }

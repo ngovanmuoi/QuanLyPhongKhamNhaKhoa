@@ -57,6 +57,9 @@
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -79,9 +82,26 @@
     <Compile Include="BLL_NhaKhoa\BLLNhomNguoiDung.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhanQuyen.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhieuDichVu.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhieuKetQua.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhieuKham.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLPhongDichVu.cs" />
     <Compile Include="BLL_NhaKhoa\BLLPhongKham.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLThanhToan.cs" />
     <Compile Include="BLL_NhaKhoa\BLLTiepDonBenhNhan.cs" />
+    <Compile Include="BLL_NhaKhoa\BLLXepLich.cs" />
+    <Compile Include="BLL_NhaKhoa\DocExcel.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuKetQuaDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuKetQuaDV.Designer.cs">
+      <DependentUpon>frmPhieuKetQuaDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="BLL_NhaKhoa\QuanLyNhaKhoa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +125,12 @@
     <Compile Include="frmPhieuKhamBenh.Designer.cs">
       <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhongDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhongDichVu.Designer.cs">
+      <DependentUpon>frmPhongDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPhongKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +148,12 @@
     </Compile>
     <Compile Include="frmQuanLyNhanVien.Designer.cs">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemNguoiDungVaoNhom.cs">
       <SubType>Form</SubType>
@@ -177,8 +209,26 @@
     <Compile Include="frmTiepDonBenhNhan.Designer.cs">
       <DependentUpon>frmTiepDonBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MailTextBox.Designer.cs">
+      <DependentUpon>MailTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumericTextBox.Designer.cs">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPHoaDon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPHoaDon.Designer.cs">
+      <DependentUpon>RPHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="RPPhieuDangKyKham.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -191,17 +241,47 @@
     <Compile Include="RPSoPhieu.Designer.cs">
       <DependentUpon>RPSoPhieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="XepLichNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XepLichNhanVien.Designer.cs">
+      <DependentUpon>XepLichNhanVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuKetQuaDV.resx">
+      <DependentUpon>frmPhieuKetQuaDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuDichVu.resx">
       <DependentUpon>frmPhieuDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuKhamBenh.resx">
       <DependentUpon>frmPhieuKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhongDichVu.resx">
+      <DependentUpon>frmPhongDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailTextBox.resx">
+      <DependentUpon>MailTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericTextBox.resx">
+      <DependentUpon>NumericTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPHoaDon.resx">
+      <DependentUpon>RPHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPPhieuDangKyKham.resx">
       <DependentUpon>RPPhieuDangKyKham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RPSoPhieu.resx">
       <DependentUpon>RPSoPhieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XepLichNhanVien.resx">
+      <DependentUpon>XepLichNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BLL_NhaKhoa\QuanLyNhaKhoa.dbml.layout">
       <DependentUpon>QuanLyNhaKhoa.dbml</DependentUpon>
@@ -261,6 +341,7 @@
       <LastGenOutput>QuanLyNhaKhoa.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\GUI_NhaKhoa.BLL_NhaKhoa.QuanLyNhaKhoaDataContext.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -327,6 +408,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
